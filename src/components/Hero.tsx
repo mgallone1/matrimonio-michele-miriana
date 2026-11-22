@@ -8,11 +8,11 @@ export const Hero: React.FC = () => {
         - Sinistra: Dalia CHIARA (Rosa Blush / Cipria cipria vellutato con sfumature crema e salvia)
         - Destra: Dalia SCURA (Bordeaux profondo / Dark Wine vellutato)
       */}
-      {/* Angolo Sinistro: Dalia Chiara (Blush Pink) */}
-      <div className="absolute top-0 left-0 sm:top-2 sm:left-2 w-28 sm:w-44 md:w-56 pointer-events-none select-none z-0 opacity-85 -rotate-6 transform -translate-x-4 -translate-y-4 sm:-translate-x-2 sm:translate-y-0">
+      {/* Angolo Sinistro: Dalia Chiara (Blush Pink) orientata verso destra */}
+      <div className="absolute top-0 left-0 sm:top-2 sm:left-2 w-28 sm:w-44 md:w-56 pointer-events-none select-none z-0 opacity-85 rotate-3 transform -translate-x-4 -translate-y-4 sm:-translate-x-2 sm:translate-y-0">
         <img
-          src="./images/dalia_chiara_blush.png"
-          alt="Dalia botanica acquerellata chiara rosa blush"
+          src="./images/dalia_chiara_blush_destra.png"
+          alt="Dalia botanica acquerellata chiara rosa blush rivolta a destra"
           className="w-full h-auto object-contain filter drop-shadow-sm"
           loading="eager"
         />

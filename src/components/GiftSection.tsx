@@ -49,6 +49,16 @@ export const GiftSection: React.FC = () => {
       </div>
 
       <div className="p-8 sm:p-12 rounded-3xl white-card text-center relative overflow-hidden">
+        {/* Accento floreale acquerellato chiaro nell'angolo della lista nozze */}
+        <div className="absolute -bottom-8 -left-8 w-28 sm:w-36 pointer-events-none select-none opacity-45">
+          <img
+            src="./images/dalia_chiara_blush_destra.png"
+            alt=""
+            className="w-full h-auto object-contain"
+            loading="lazy"
+          />
+        </div>
+
         <p className="text-[#2c2c2c] text-base sm:text-lg max-w-xl mx-auto leading-relaxed mb-8 font-serif font-light">
           «Il regalo più bello sarà averti con noi per festeggiare, ridere e ballare. 
           Se desideri accompagnare i nostri primi passi e contribuire al nostro viaggio di nozze, puoi farlo qui:»

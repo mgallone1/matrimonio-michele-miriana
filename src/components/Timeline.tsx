@@ -64,6 +64,16 @@ export const Timeline: React.FC = () => {
       </div>
 
       <div className="relative">
+        {/* Accento floreale acquerellato discreto sul lato destro del programma */}
+        <div className="absolute -top-12 -right-8 w-24 sm:w-36 pointer-events-none select-none opacity-40 hidden md:block">
+          <img
+            src="./images/dalia_scura_burgundy.png"
+            alt=""
+            className="w-full h-auto object-contain"
+            loading="lazy"
+          />
+        </div>
+
         <div className="absolute left-6 sm:left-1/2 top-4 bottom-4 w-[1px] bg-champagne -translate-x-1/2 hidden sm:block" />
         <div className="absolute left-6 top-4 bottom-4 w-[1px] bg-champagne sm:hidden" />
 
