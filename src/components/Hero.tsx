@@ -39,17 +39,17 @@ export const Hero: React.FC = () => {
         </p>
 
         {/* 
-          NOMI DISPOSTI IN SCALETTATURA DINAMICA / AUREA:
-          Michele a sinistra, & al centro, Miriana a destra
+          NOMI DISPOSTI IN SCALETTATURA ELEGANTE E BILANCIATA:
+          Michele leggermente a sinistra, & più grande al centro, Miriana leggermente a destra
         */}
-        <h1 className="font-script text-burgundy font-normal select-none drop-shadow-sm mb-4 tracking-wide max-w-xl mx-auto">
-          <span className="block text-left pl-2 sm:pl-6 text-6xl sm:text-7xl md:text-8xl leading-none">
+        <h1 className="font-script text-burgundy font-normal select-none drop-shadow-sm mb-4 tracking-wide max-w-md mx-auto">
+          <span className="block text-center -translate-x-6 sm:-translate-x-12 text-6xl sm:text-7xl md:text-8xl leading-none">
             Michele
           </span>
-          <span className="block text-center text-4xl sm:text-5xl md:text-6xl text-burgundy/80 -my-1 sm:-my-2 font-serif italic">
+          <span className="block text-center text-5xl sm:text-6xl md:text-7xl text-burgundy/85 -my-2 sm:-my-3 font-serif italic select-none">
             &amp;
           </span>
-          <span className="block text-right pr-2 sm:pr-6 text-6xl sm:text-7xl md:text-8xl leading-none">
+          <span className="block text-center translate-x-6 sm:translate-x-12 text-6xl sm:text-7xl md:text-8xl leading-none">
             Miriana
           </span>
         </h1>
