@@ -5,6 +5,7 @@ import { Hero } from './components/Hero';
 import { CeremonyCard } from './components/CeremonyCard';
 import { Countdown } from './components/Countdown';
 import { Timeline } from './components/Timeline';
+import { DahliaAtmosphereSection } from './components/DahliaAtmosphereSection';
 import { LocationSection } from './components/LocationSection';
 import { FaqSection } from './components/FaqSection';
 import { GiftSection } from './components/GiftSection';
@@ -38,6 +39,7 @@ export const App: React.FC = () => {
   const navLinks = [
     { href: '#cerimonia', label: 'Cerimonia e Ricevimento', icon: Calendar },
     { href: '#timeline', label: 'Programma della Giornata', icon: Calendar },
+    { href: '#dalie', label: 'I Nostri Fiori: Le Dalie', icon: Calendar },
     { href: '#location', label: 'La Tenuta e Indicazioni', icon: MapPin },
     { href: '#faq', label: 'FAQ, Dress Code e Alloggi', icon: HelpCircle },
     { href: '#gift', label: 'Lista Nozze e Coordinate IBAN', icon: Gift },
@@ -154,16 +156,13 @@ export const App: React.FC = () => {
                   <p className="text-[10px] uppercase tracking-[0.25em] text-sage font-medium font-sans px-3 mb-3">
                     Sezioni della Partecipazione
                   </p>
-                  {navLinks.map((link, idx) => {
+                  {navLinks.map((link) => {
                     const Icon = link.icon;
                     return (
-                      <motion.a
+                      <a
                         key={link.href}
                         href={link.href}
                         onClick={() => setIsMenuOpen(false)}
-                        initial={{ opacity: 0, x: 20 }}
-                        animate={{ opacity: 1, x: 0 }}
-                        transition={{ delay: 0.1 + idx * 0.05, duration: 0.4 }}
                         className={`flex items-center gap-3 px-3.5 py-3 rounded-xl transition-all font-sans text-xs uppercase tracking-wider font-medium ${
                           link.highlight
                             ? 'bg-burgundy text-white shadow-md'
@@ -172,7 +171,7 @@ export const App: React.FC = () => {
                       >
                         <Icon className={`w-4 h-4 shrink-0 ${link.highlight ? 'text-white' : 'text-sage'}`} />
                         <span>{link.label}</span>
-                      </motion.a>
+                      </a>
                     );
                   })}
 
@@ -203,6 +202,7 @@ export const App: React.FC = () => {
           <CeremonyCard />
           <Countdown />
           <Timeline />
+          <DahliaAtmosphereSection />
           <LocationSection />
           <FaqSection />
           <GiftSection />

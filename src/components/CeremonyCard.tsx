@@ -3,12 +3,12 @@ import { Clock, MapPin, Sparkles } from 'lucide-react';
 
 export const CeremonyCard: React.FC = () => {
   return (
-    <section id="cerimonia" className="pt-2 pb-12 sm:pb-16 px-4 max-w-4xl mx-auto scroll-mt-6 bg-white">
+    <section id="cerimonia" className="pt-2 pb-10 sm:pb-14 px-4 max-w-4xl mx-auto scroll-mt-6 bg-white">
       {/* 
         Acquerello autentico della Cappella storica con bouganville 
         simbolo iconico della Tenuta Tana di Volpe - Posizionato subito in alto
       */}
-      <div className="mb-8 max-w-2xl mx-auto rounded-3xl overflow-hidden shadow-lg border border-champagne bg-white p-2.5 sm:p-3">
+      <div className="mb-6 max-w-2xl mx-auto rounded-3xl overflow-hidden shadow-lg border border-champagne bg-white p-2 sm:p-3">
         <div className="relative rounded-2xl overflow-hidden aspect-[4/3] sm:aspect-[16/10] bg-[#faf8f5]">
           <img
             src="./images/cappella_acquerello.jpg"
@@ -75,7 +75,7 @@ export const CeremonyCard: React.FC = () => {
                   Tenuta Tana di Volpe
                 </strong>
                 <span className="text-xs text-[#555555] font-sans">
-                  Via S. Nicola • Albanella (Salerno)
+                  Via Provinciale, 19 • Matinella di Albanella (SA)
                 </span>
               </div>
             </div>
