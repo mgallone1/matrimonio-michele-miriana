@@ -6,19 +6,19 @@ export const CeremonyCard: React.FC = () => {
     <section id="cerimonia" className="pt-2 pb-10 sm:pb-14 px-4 max-w-4xl mx-auto scroll-mt-6 bg-white">
       {/* 
         Acquerello autentico della Cappella storica con bouganville 
-        simbolo iconico della Tenuta Tana di Volpe - Posizionato subito in alto
+        Mostrato liberamente come dipinto senza riquadri card né bordi
       */}
-      <div className="mb-6 max-w-2xl mx-auto rounded-3xl overflow-hidden shadow-lg border border-champagne bg-white p-2 sm:p-3">
-        <div className="relative rounded-2xl overflow-hidden aspect-[4/3] sm:aspect-[16/10] bg-[#faf8f5]">
+      <div className="mb-8 max-w-2xl mx-auto text-center">
+        <div className="relative overflow-hidden aspect-[4/3] sm:aspect-[16/10] rounded-2xl">
           <img
             src="./images/cappella_acquerello.jpg"
-            alt="La Cappella Storica di Tenuta Tana di Volpe dipinta ad acquerello"
+            alt="Tenuta Tana di Volpe dipinta ad acquerello"
             className="w-full h-full object-cover object-center filter contrast-[1.03]"
             loading="lazy"
           />
-          <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent flex items-end p-4 sm:p-5">
-            <p className="text-white text-xs sm:text-sm font-sans tracking-wider uppercase font-medium drop-shadow-md">
-              La Cappella Storica e i Giardini • Tenuta Tana di Volpe
+          <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent flex items-end justify-center p-4 sm:p-5">
+            <p className="text-white text-xs sm:text-sm font-sans tracking-widest uppercase font-medium drop-shadow-md">
+              Tenuta Tana di Volpe
             </p>
           </div>
         </div>

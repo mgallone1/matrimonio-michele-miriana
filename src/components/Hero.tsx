@@ -35,9 +35,9 @@ export const Hero: React.FC = () => {
           «Una promessa che dura per sempre, una festa che comincia oggi insieme a voi.»
         </p>
 
-        {/* Box Data Pulito: SOLO 2 LUGLIO 2027 */}
-        <div className="py-2 px-8 border-y border-champagne max-w-xs sm:max-w-sm mx-auto mb-2 bg-white/90 backdrop-blur-sm rounded-xl shadow-sm">
-          <p className="font-serif text-2xl sm:text-3xl font-medium tracking-wide text-burgundy">
+        {/* Data del matrimonio senza riquadro, in font script come i nomi (+50% dimensione) */}
+        <div className="max-w-md mx-auto mb-2 text-center">
+          <p className="font-script text-4xl sm:text-5xl md:text-6xl text-burgundy font-normal select-none leading-tight">
             2 Luglio 2027
           </p>
         </div>
