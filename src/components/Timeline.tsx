@@ -1,6 +1,5 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { DahliaFlower } from './DahliaFlower';
 
 interface TimelineStep {
   time: string;
@@ -58,9 +57,6 @@ export const Timeline: React.FC = () => {
         <h2 className="font-serif text-3xl sm:text-5xl text-[#1a1a1a] font-normal">
           Il Programma delle Nozze
         </h2>
-        <div className="floral-divider">
-          <DahliaFlower size={18} />
-        </div>
       </div>
 
       <div className="relative">

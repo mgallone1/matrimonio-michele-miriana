@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import { ChevronDown, Hotel } from 'lucide-react';
-import { DahliaFlower } from './DahliaFlower';
 
 interface FaqItem {
   id: string;
@@ -82,9 +81,6 @@ export const FaqSection: React.FC = () => {
         <h2 className="font-serif text-3xl sm:text-5xl text-[#1a1a1a] font-normal">
           Dettagli &amp; Consigli Utili
         </h2>
-        <div className="floral-divider">
-          <DahliaFlower size={18} />
-        </div>
       </div>
 
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 items-start mb-12">

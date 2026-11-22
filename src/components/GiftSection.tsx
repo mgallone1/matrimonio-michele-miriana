@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Magnetic } from './reactbits/Magnetic';
 import { getBankSettings, BankSettings } from '../lib/bankSettings';
-import { DahliaFlower } from './DahliaFlower';
 import { Check, Copy } from 'lucide-react';
 
 export const GiftSection: React.FC = () => {
@@ -43,9 +42,6 @@ export const GiftSection: React.FC = () => {
         <h2 className="font-serif text-3xl sm:text-5xl text-[#1a1a1a] font-normal">
           Lista Nozze &amp; Luna di Miele
         </h2>
-        <div className="floral-divider">
-          <DahliaFlower size={18} />
-        </div>
       </div>
 
       <div className="p-8 sm:p-12 rounded-3xl white-card text-center relative overflow-hidden">
