@@ -1,22 +1,33 @@
 import React from 'react';
-import { Clock, MapPin, Heart, Sparkles } from 'lucide-react';
-import { DahliaFlower } from './DahliaFlower';
+import { Clock, MapPin, Sparkles } from 'lucide-react';
 
 export const CeremonyCard: React.FC = () => {
   return (
-    <section id="cerimonia" className="py-12 px-4 max-w-4xl mx-auto scroll-mt-14">
+    <section id="cerimonia" className="py-16 px-4 max-w-4xl mx-auto scroll-mt-12 bg-white">
+      {/* 
+        Acquerello autentico della Cappella storica con bouganville 
+        simbolo iconico della Tenuta Tana di Volpe
+      */}
+      <div className="mb-10 max-w-2xl mx-auto rounded-3xl overflow-hidden shadow-lg border border-champagne bg-white p-3 sm:p-4">
+        <div className="relative rounded-2xl overflow-hidden aspect-[4/3] sm:aspect-[16/10] bg-[#faf8f5]">
+          <img
+            src="./images/cappella_acquerello.jpg"
+            alt="La Cappella Storica di Tenuta Tana di Volpe dipinta ad acquerello"
+            className="w-full h-full object-cover object-center filter contrast-[1.03]"
+            loading="lazy"
+          />
+          <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent flex items-end p-4 sm:p-6">
+            <p className="text-white text-xs sm:text-sm font-sans tracking-wider uppercase font-medium drop-shadow-md">
+              La Cappella Storica &amp; I Giardini • Tenuta Tana di Volpe
+            </p>
+          </div>
+        </div>
+      </div>
+
       {/* Blocco Nobilitato Unico: Data, Orario, Luogo & Tipologia Rito */}
       <div className="relative rounded-3xl bg-white border border-champagne p-8 sm:p-12 shadow-sm text-center overflow-hidden">
-        {/* Dalie ad acquerello decorative agli angoli */}
-        <div className="absolute -top-4 -left-4 pointer-events-none opacity-40">
-          <DahliaFlower size={80} />
-        </div>
-        <div className="absolute -bottom-4 -right-4 pointer-events-none opacity-40">
-          <DahliaFlower size={80} />
-        </div>
-
         <div className="relative z-10 max-w-2xl mx-auto">
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-champagne-light/80 border border-champagne mb-4">
+          <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-champagne-light border border-champagne mb-4">
             <Sparkles className="w-3.5 h-3.5 text-burgundy" />
             <span className="font-sans text-[11px] uppercase tracking-[0.25em] text-espresso font-medium">
               Rito Civile &amp; Ricevimento
@@ -28,76 +39,58 @@ export const CeremonyCard: React.FC = () => {
           </h2>
 
           <p className="font-serif italic text-[#333333] text-base sm:text-lg mb-8 font-light">
-            Saremo felici di accogliervi per celebrare insieme il momento del sì e proseguire con i festeggiamenti fino a sera.
+            Saremo felici di accogliervi per celebrare insieme il momento del sì e proseguire con i festeggiamenti tra i giardini in fiore e il verde delle colline cilentane.
           </p>
 
-          {/* Griglia Informazioni a contrasto elegante */}
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 border-y border-champagne py-6 mb-8 text-left bg-paper-subtle/40 rounded-2xl p-4">
-            {/* Data e Giorno */}
-            <div className="flex items-start gap-3 p-2">
-              <div className="w-9 h-9 rounded-full bg-champagne-light border border-champagne flex items-center justify-center shrink-0 text-burgundy mt-0.5">
-                <Heart className="w-4 h-4 fill-burgundy/10 text-burgundy" />
-              </div>
-              <div>
-                <span className="text-[11px] uppercase tracking-wider text-sage font-medium font-sans block mb-0.5">
-                  Quando
-                </span>
-                <strong className="font-serif text-lg text-[#1a1a1a] block font-medium">
-                  Venerdì
-                </strong>
-                <span className="text-xs text-[#444444] font-sans">
-                  2 Luglio 2027
-                </span>
-              </div>
-            </div>
-
+          {/* Griglia Informazioni a contrasto chiaro */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 border-y border-champagne py-6 mb-8 text-left bg-[#faf8f5] rounded-2xl p-6">
             {/* Orario */}
-            <div className="flex items-start gap-3 p-2 border-t sm:border-t-0 sm:border-l border-champagne/60 sm:pl-4">
-              <div className="w-9 h-9 rounded-full bg-champagne-light border border-champagne flex items-center justify-center shrink-0 text-sage mt-0.5">
-                <Clock className="w-4 h-4 text-sage" />
+            <div className="flex items-start gap-3.5">
+              <div className="w-10 h-10 rounded-full bg-white border border-champagne flex items-center justify-center shrink-0 text-burgundy shadow-sm mt-0.5">
+                <Clock className="w-5 h-5 text-burgundy" />
               </div>
               <div>
                 <span className="text-[11px] uppercase tracking-wider text-sage font-medium font-sans block mb-0.5">
                   Orario d'Inizio
                 </span>
-                <strong className="font-serif text-lg text-[#1a1a1a] block font-medium">
+                <strong className="font-serif text-xl text-[#1a1a1a] block font-medium">
                   Ore 16:30
                 </strong>
-                <span className="text-xs text-[#444444] font-sans">
-                  Arrivo ospiti e benvenuto
+                <span className="text-xs text-[#555555] font-sans">
+                  Venerdì 2 Luglio 2027 • Accoglienza e cerimonia
                 </span>
               </div>
             </div>
 
             {/* Luogo */}
-            <div className="flex items-start gap-3 p-2 border-t sm:border-t-0 sm:border-l border-champagne/60 sm:pl-4">
-              <div className="w-9 h-9 rounded-full bg-champagne-light border border-champagne flex items-center justify-center shrink-0 text-burgundy mt-0.5">
-                <MapPin className="w-4 h-4 text-burgundy" />
+            <div className="flex items-start gap-3.5 border-t sm:border-t-0 sm:border-l border-champagne/60 pt-4 sm:pt-0 sm:pl-6">
+              <div className="w-10 h-10 rounded-full bg-white border border-champagne flex items-center justify-center shrink-0 text-sage shadow-sm mt-0.5">
+                <MapPin className="w-5 h-5 text-sage" />
               </div>
               <div>
                 <span className="text-[11px] uppercase tracking-wider text-sage font-medium font-sans block mb-0.5">
-                  Dove
+                  Location
                 </span>
-                <strong className="font-serif text-lg text-[#1a1a1a] block font-medium">
+                <strong className="font-serif text-xl text-[#1a1a1a] block font-medium">
                   Tenuta Tana di Volpe
                 </strong>
-                <span className="text-xs text-[#444444] font-sans">
-                  Albanella (Salerno) • Cilento
+                <span className="text-xs text-[#555555] font-sans">
+                  Via S. Nicola • Albanella (Salerno)
                 </span>
               </div>
             </div>
           </div>
 
-          <div className="flex flex-wrap items-center justify-center gap-3">
+          <div className="flex flex-wrap items-center justify-center gap-4">
             <a
               href="#location"
-              className="btn-secondary text-[11px] uppercase tracking-wider py-2.5 px-5 font-sans"
+              className="btn-secondary text-xs uppercase tracking-wider py-2.5 px-6 font-sans"
             >
               Guarda la Tenuta &amp; Indicazioni stradali
             </a>
             <a
               href="#timeline"
-              className="btn-primary text-[11px] uppercase tracking-wider py-2.5 px-5 font-sans"
+              className="btn-primary text-xs uppercase tracking-wider py-2.5 px-6 font-sans"
             >
               Scopri il Programma
             </a>

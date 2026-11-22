@@ -1,7 +1,6 @@
 import React, { useRef } from 'react';
 import gsap from 'gsap';
 import { TattooHeart } from './TattooHeart';
-import { DahliaFlower } from './DahliaFlower';
 
 interface InvitationCardModalProps {
   isOpen: boolean;
@@ -54,14 +53,6 @@ export const InvitationCardModal: React.FC<InvitationCardModalProps> = ({ isOpen
         ref={cardRef}
         className="relative w-full max-w-lg bg-white rounded-3xl p-8 sm:p-12 border border-champagne shadow-2xl text-center overflow-hidden"
       >
-        {/* Dalie ad acquerello discrete agli angoli per portare luce e colore */}
-        <div className="absolute -top-3 -right-3 pointer-events-none opacity-45">
-          <DahliaFlower size={70} />
-        </div>
-        <div className="absolute -bottom-3 -left-3 pointer-events-none opacity-45">
-          <DahliaFlower size={70} />
-        </div>
-
         {/* Il Simbolo Ufficiale: Il Tatuaggio Cuore M & M */}
         <div className="flex justify-center mb-5">
           <TattooHeart className="w-16 h-16 text-burgundy transition-transform hover:scale-105 duration-300" />
@@ -72,24 +63,16 @@ export const InvitationCardModal: React.FC<InvitationCardModalProps> = ({ isOpen
         </p>
 
         {/* Nomi con font calligrafico autentico */}
-        <h1 className="font-script text-4xl sm:text-6xl text-burgundy font-normal tracking-wide mb-3 select-none">
+        <h1 className="font-script text-4xl sm:text-6xl text-burgundy font-normal tracking-wide mb-4 select-none">
           Michele &amp; Miriana
         </h1>
-
-        <div className="flex items-center justify-center gap-3 my-4">
-          <div className="w-10 h-px bg-champagne" />
-          <DahliaFlower size={16} />
-          <TattooHeart className="w-4 h-4 text-burgundy/80 mx-0.5" />
-          <DahliaFlower size={16} />
-          <div className="w-10 h-px bg-champagne" />
-        </div>
 
         <p className="font-serif italic text-[#2c2c2c] text-base sm:text-lg max-w-sm mx-auto mb-8 font-light">
           Hanno il piacere di invitarvi a celebrare il loro matrimonio
         </p>
 
         {/* Data e Luogo */}
-        <div className="py-4 border-y border-champagne mb-8 space-y-1.5 bg-paper-subtle/50 rounded-xl">
+        <div className="py-4 border-y border-champagne mb-8 space-y-1.5 bg-[#faf8f5] rounded-xl">
           <p className="font-serif text-xl sm:text-2xl text-[#1a1a1a] font-medium">
             2 Luglio 2027
           </p>

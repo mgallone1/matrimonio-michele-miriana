@@ -10,7 +10,7 @@ import { GiftSection } from './components/GiftSection';
 import { RsvpForm } from './components/RsvpForm';
 import { AdminModal } from './components/AdminModal';
 import { TattooHeart } from './components/TattooHeart';
-import { Lock, Menu, X, Calendar, MapPin, Gift, HelpCircle, Send } from 'lucide-react';
+import { Lock, X, Calendar, MapPin, Gift, HelpCircle, Send } from 'lucide-react';
 import { SmoothScroll } from './components/reactbits/SmoothScroll';
 
 export const App: React.FC = () => {
@@ -51,10 +51,11 @@ export const App: React.FC = () => {
 
         {/* 
           Barra di Navigazione:
-          - Logo Tatuaggio a sinistra (chiaro, grande e definito)
-          - Toast / Menu a tre righe a destra per aprire il menu a scomparsa
+          - Logo Tatuaggio M&M sulla sinistra
+          - Menu orizzontale discreto al centro
+          - Icona Toast a 3 righe pulita SENZA cerchio invasivo sulla destra
         */}
-        <nav className="sticky top-0 z-40 bg-white/95 backdrop-blur-md border-b border-champagne/60 py-2.5 px-4 sm:px-8">
+        <nav className="sticky top-0 z-40 bg-white/95 backdrop-blur-md border-b border-champagne/60 py-3 px-4 sm:px-8">
           <div className="max-w-6xl mx-auto flex items-center justify-between">
             {/* Colonna Sinistra: Logo Tatuaggio M&M */}
             <div className="flex items-center">
@@ -67,8 +68,8 @@ export const App: React.FC = () => {
               </a>
             </div>
 
-            {/* Voci di navigazione desktop discrete */}
-            <div className="hidden lg:flex items-center gap-7 text-[12px] uppercase tracking-[0.2em] font-medium text-[#222222] font-sans">
+            {/* Voci di navigazione desktop chiare */}
+            <div className="hidden md:flex items-center gap-7 text-[12px] uppercase tracking-[0.2em] font-medium text-[#222222] font-sans">
               <a href="#cerimonia" className="hover:text-burgundy transition-colors py-1">
                 Cerimonia
               </a>
@@ -86,30 +87,30 @@ export const App: React.FC = () => {
               </a>
             </div>
 
-            {/* Colonna Destra: Tasto a tre righe (Hamburger/Toast) per richiamare i sottomenu */}
-            <div className="flex items-center gap-3">
+            {/* Colonna Destra: Toast pulito a 3 righe SENZA cerchio né sfondi pesanti */}
+            <div className="flex items-center">
               <button
                 type="button"
                 onClick={() => setIsMenuOpen(!isMenuOpen)}
-                className="p-2 sm:px-3.5 sm:py-2 rounded-full border border-champagne bg-white hover:border-burgundy/50 text-[#1a1a1a] hover:text-burgundy transition-colors flex items-center gap-2 shadow-sm font-sans"
-                title="Menu della partecipazione"
+                className="p-2 text-[#1a1a1a] hover:text-burgundy transition-colors flex flex-col justify-center items-end gap-1.5 group cursor-pointer"
+                title="Menu"
                 aria-label="Apri menu sezioni"
               >
-                <Menu className="w-5 h-5 text-burgundy" />
-                <span className="hidden sm:inline text-xs uppercase tracking-wider font-medium">
-                  Menu
-                </span>
+                {/* 3 righe raffinate e minimali, senza cerchio esterno */}
+                <span className="w-6 h-0.5 bg-current rounded-full transition-all group-hover:w-7" />
+                <span className="w-4 h-0.5 bg-current rounded-full transition-all group-hover:w-7" />
+                <span className="w-5 h-0.5 bg-current rounded-full transition-all group-hover:w-7" />
               </button>
             </div>
           </div>
         </nav>
 
         {/* 
-          Menu Toast Laterale a Scomparsa (apribile dal tasto a 3 righe) 
+          Menu Toast Laterale a Scomparsa (con animazione fluida e graduale)
         */}
         {isMenuOpen && (
-          <div className="fixed inset-0 z-50 flex justify-end bg-[#1a120e]/40 backdrop-blur-sm animate-fadeIn">
-            <div className="w-full max-w-sm bg-white h-full shadow-2xl border-l border-champagne flex flex-col p-6 sm:p-8 animate-slideLeft">
+          <div className="fixed inset-0 z-50 flex justify-end bg-black/35 backdrop-blur-sm transition-opacity duration-500 ease-out">
+            <div className="w-full max-w-sm bg-white h-full shadow-2xl border-l border-champagne flex flex-col p-6 sm:p-8 transition-transform duration-500 ease-out">
               <div className="flex items-center justify-between pb-6 border-b border-champagne/60 mb-6">
                 <div className="flex items-center gap-2">
                   <TattooHeart className="w-8 h-8 text-burgundy" />
@@ -120,7 +121,7 @@ export const App: React.FC = () => {
                 <button
                   type="button"
                   onClick={() => setIsMenuOpen(false)}
-                  className="p-2 rounded-full hover:bg-paper-subtle text-[#1a1a1a] transition-colors"
+                  className="p-2 text-[#1a1a1a] hover:text-burgundy transition-colors"
                   aria-label="Chiudi menu"
                 >
                   <X className="w-5 h-5" />
