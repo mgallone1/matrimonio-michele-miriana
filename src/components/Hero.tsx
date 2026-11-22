@@ -4,6 +4,19 @@ export const Hero: React.FC = () => {
   return (
     <header className="relative pt-10 sm:pt-16 pb-6 sm:pb-8 px-4 text-center overflow-hidden flex items-center justify-center bg-white">
       {/* 
+        Dalia acquerellata in alto nell'angolo:
+        Raffinata, sfumata, nei toni bordeaux, blush e salvia per portare calore e luce
+      */}
+      <div className="absolute top-0 right-0 sm:top-2 sm:right-2 w-28 sm:w-44 md:w-56 pointer-events-none select-none z-0 opacity-85 rotate-6 transform translate-x-4 -translate-y-4 sm:translate-x-2 sm:translate-y-0">
+        <img
+          src="./images/dalia_angolo_acquerello.png"
+          alt="Dalia botanica acquerellata"
+          className="w-full h-auto object-contain filter drop-shadow-sm"
+          loading="eager"
+        />
+      </div>
+
+      {/* 
         Acquerello della Tenuta come SFONDO TENUE su BIANCO PURO (#FFFFFF):
         Opacità calibrata al 20%, luminoso, fresco e discreto.
       */}
