@@ -82,7 +82,7 @@ export const Countdown: React.FC = () => {
         </p>
 
         <h3 className="font-serif text-2xl sm:text-3xl text-espresso font-normal mb-8">
-          Venerdì, <span className="font-medium text-burgundy">2 Luglio 2027</span> • Ore 16:30
+          Venerdì, <span className="font-medium text-rose-mauve">2 Luglio 2027</span> • Ore 16:30
         </h3>
 
         {/* 

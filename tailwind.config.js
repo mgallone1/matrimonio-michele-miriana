@@ -22,6 +22,12 @@ export default {
           light: '#faede7',
           dark: '#dca68e',
         },
+        rose: {
+          DEFAULT: '#e5517c', // Rosa ciclamino / Dalia pompon dal bouquet
+          light: '#fde8ef',
+          dark: '#ba3158',
+          mauve: '#923649', // Rosa orchidea / Mauve
+        },
         sage: {
           DEFAULT: '#626a3a',
           light: '#f2f5e8',

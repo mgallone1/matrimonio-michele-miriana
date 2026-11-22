@@ -25,9 +25,9 @@ export const CeremonyCard: React.FC = () => {
       {/* Blocco Nobilitato Unico: Data, Orario, Luogo e Tipologia Rito */}
       <div className="relative rounded-3xl bg-white border border-champagne p-6 sm:p-10 shadow-sm text-center overflow-hidden">
         <div className="relative z-10 max-w-2xl mx-auto">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-champagne-light border border-champagne mb-3">
-            <Sparkles className="w-3.5 h-3.5 text-burgundy" />
-            <span className="font-sans text-[11px] uppercase tracking-[0.25em] text-espresso font-medium">
+          <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-rose-light/80 border border-rose/30 mb-3">
+            <Sparkles className="w-3.5 h-3.5 text-rose" />
+            <span className="font-sans text-[11px] uppercase tracking-[0.25em] text-rose-mauve font-medium">
               Rito Civile e Ricevimento
             </span>
           </div>
