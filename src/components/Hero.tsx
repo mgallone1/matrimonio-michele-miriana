@@ -33,13 +33,13 @@ export const Hero: React.FC = () => {
       </div>
 
       <div className="max-w-3xl mx-auto relative z-10 w-full -mt-2 sm:-mt-3">
-        {/* Sovratitolo in Verde Salvia Nobile (#626a3a) sollevato verso l'alto */}
-        <p className="font-sans text-xs uppercase tracking-[0.35em] text-sage font-medium mb-1">
+        {/* Sovratitolo in Verde Salvia Nobile (#626a3a) con spaziatura inferiore aurea aumentata */}
+        <p className="font-sans text-xs uppercase tracking-[0.35em] text-sage font-medium mb-3 sm:mb-4">
           Partecipazione di Nozze
         </p>
 
-        {/* NOMI CENTRALI GRANDI con Great Vibes in Bordeaux nobile (#4a0d1b) */}
-        <h1 className="font-script text-5xl sm:text-7xl md:text-8xl text-burgundy font-normal leading-tight mb-3 select-none drop-shadow-sm">
+        {/* NOMI CENTRALI GRANDI con Alex Brush in Bordeaux nobile (#4a0d1b) e tratto sottile ed elegante */}
+        <h1 className="font-script text-6xl sm:text-8xl md:text-9xl text-burgundy font-normal leading-tight mb-4 select-none drop-shadow-sm tracking-wide">
           Michele &amp; Miriana
         </h1>
 
@@ -48,9 +48,9 @@ export const Hero: React.FC = () => {
           «Una promessa che dura per sempre, una festa che comincia oggi insieme a voi.»
         </p>
 
-        {/* Data del matrimonio senza riquadro, in font script come i nomi (+50% dimensione) */}
+        {/* Data del matrimonio senza riquadro, in font script Alex Brush come i nomi */}
         <div className="max-w-md mx-auto mb-1 text-center">
-          <p className="font-script text-4xl sm:text-5xl md:text-6xl text-burgundy font-normal select-none leading-tight">
+          <p className="font-script text-5xl sm:text-6xl md:text-7xl text-burgundy font-normal select-none leading-tight tracking-wide">
             2 Luglio 2027
           </p>
         </div>

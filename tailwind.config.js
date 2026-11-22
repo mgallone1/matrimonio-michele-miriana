@@ -48,7 +48,7 @@ export default {
       fontFamily: {
         serif: ['"Playfair Display"', '"Cormorant Garamond"', 'Georgia', 'serif'],
         sans: ['"Montserrat"', 'Inter', 'system-ui', 'sans-serif'],
-        script: ['"Great Vibes"', 'cursive']
+        script: ['"Alex Brush"', 'cursive']
       },
       // Scala tipografica e spaziatura armonica basata sulla Sezione Aurea (φ = 1.618)
       fontSize: {
