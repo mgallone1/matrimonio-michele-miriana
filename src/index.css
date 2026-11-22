@@ -1,0 +1,109 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    -webkit-tap-highlight-color: transparent;
+  }
+  
+  body {
+    background-color: #FFFFFF; /* BIANCO PURO E LIMPIDO */
+    color: #523c2f;
+    font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+  }
+
+  button, input, textarea, select {
+    touch-action: manipulation;
+  }
+}
+
+/* Card bianche pure con bordi nobilitati della palette */
+.white-card {
+  background-color: #FFFFFF;
+  border: 1px solid rgba(218, 205, 189, 0.7);
+  box-shadow: 0 10px 30px -4px rgba(82, 60, 47, 0.04);
+}
+
+.white-card-hover {
+  transition: all 0.25s ease;
+}
+
+.white-card-hover:hover {
+  border-color: #bf9d9b;
+  transform: translateY(-2px);
+  box-shadow: 0 14px 34px -4px rgba(82, 60, 47, 0.08);
+}
+
+/* Pulsanti con i colori autentici della palette di Miriana */
+.btn-primary {
+  min-height: 48px;
+  min-width: 44px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #530c1e; /* Bordeaux */
+  color: #FFFFFF;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  font-size: 0.8125rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  border-radius: 9999px;
+  padding: 0.875rem 2rem;
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow: 0 4px 18px rgba(83, 12, 30, 0.25);
+}
+
+.btn-primary:hover {
+  background-color: #6e1229;
+  transform: translateY(-1.5px);
+  box-shadow: 0 6px 22px rgba(83, 12, 30, 0.32);
+}
+
+.btn-primary:active {
+  transform: scale(0.98);
+}
+
+.btn-secondary {
+  min-height: 48px;
+  min-width: 44px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #FFFFFF;
+  color: #4f523f; /* Verde Salvia */
+  border: 1px solid #4f523f;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  font-size: 0.8125rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  border-radius: 9999px;
+  padding: 0.875rem 1.75rem;
+  transition: all 0.2s ease;
+}
+
+.btn-secondary:hover {
+  background-color: rgba(79, 82, 63, 0.06);
+  color: #383a2c;
+  border-color: #383a2c;
+}
+
+/* Divisore Floreale con Dalia Blush e linee Champagne */
+.floral-divider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.25rem;
+  margin: 1.5rem auto 2.5rem;
+  max-width: 260px;
+}
+
+.floral-divider::before,
+.floral-divider::after {
+  content: "";
+  height: 1px;
+  flex: 1;
+  background: linear-gradient(to right, transparent, #dacdbd, transparent);
+}

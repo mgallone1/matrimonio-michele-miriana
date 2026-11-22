@@ -1,0 +1,47 @@
+/**
+ * Michele & Miriana - 2 Luglio 2027 - Tana di Volpe
+ * Design Tokens & Anti-UI-Slop Botanical Watercolor Theme
+ */
+
+:root {
+  /* Palette Ufficiale Michele & Miriana */
+  --color-espresso: #523c2f;
+  --color-espresso-rgb: 82, 60, 47;
+  --color-champagne: #dacdbd;
+  --color-champagne-rgb: 218, 205, 189;
+  --color-blush: #bf9d9b;
+  --color-blush-rgb: 191, 157, 155;
+  --color-sage: #4f523f;
+  --color-sage-rgb: 79, 82, 63;
+  --color-burgundy: #530c1e;
+  --color-burgundy-rgb: 83, 12, 30;
+
+  /* Carta & Texture Cotone Organico */
+  --bg-paper: #FAF7F2;
+  --bg-card: #FFFFFF;
+  --bg-card-subtle: #F6F1EA;
+  --border-delicate: rgba(82, 60, 47, 0.15);
+  --border-gold: rgba(218, 205, 189, 0.6);
+
+  /* Contrasti Accessibilità WCAG 2.2 AA */
+  --text-main: #342720;
+  --text-muted: #6e5c53;
+  --text-burgundy: #530c1e;
+  --text-sage: #404432;
+
+  /* Tipografia Editoriale */
+  --font-serif: 'Cormorant Garamond', 'Playfair Display', Georgia, serif;
+  --font-sans: 'Plus Jakarta Sans', 'Inter', -apple-system, sans-serif;
+  --font-script: 'Pinyon Script', 'Great Vibes', cursive;
+
+  /* Ergonomia e Spaziatura */
+  --tap-min-size: 44px;
+  --radius-sm: 8px;
+  --radius-md: 14px;
+  --radius-lg: 24px;
+  --radius-pill: 9999px;
+
+  /* Ombre Tattili Delicate (No AI-slop neon glows) */
+  --shadow-paper: 0 4px 20px -2px rgba(82, 60, 47, 0.06), 0 2px 6px -1px rgba(82, 60, 47, 0.04);
+  --shadow-card: 0 10px 30px -4px rgba(82, 60, 47, 0.08);
+}

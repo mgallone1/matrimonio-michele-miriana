@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 40" width="100%" height="40" fill="none" stroke="currentColor">
+  <path d="M 20 20 L 160 20" stroke-width="0.8" stroke-dasharray="2 4" opacity="0.5"/>
+  <!-- Stylized central dahlia -->
+  <g transform="translate(200, 20) scale(0.18)" stroke-width="1.4">
+    <circle cx="0" cy="0" r="8" fill="currentColor"/>
+    <!-- 8 core petals -->
+    <path d="M0,0 C15,-30 10,-60 0,-70 C-10,-60 -15,-30 0,0" transform="rotate(0)"/>
+    <path d="M0,0 C15,-30 10,-60 0,-70 C-10,-60 -15,-30 0,0" transform="rotate(45)"/>
+    <path d="M0,0 C15,-30 10,-60 0,-70 C-10,-60 -15,-30 0,0" transform="rotate(90)"/>
+    <path d="M0,0 C15,-30 10,-60 0,-70 C-10,-60 -15,-30 0,0" transform="rotate(135)"/>
+    <path d="M0,0 C15,-30 10,-60 0,-70 C-10,-60 -15,-30 0,0" transform="rotate(180)"/>
+    <path d="M0,0 C15,-30 10,-60 0,-70 C-10,-60 -15,-30 0,0" transform="rotate(225)"/>
+    <path d="M0,0 C15,-30 10,-60 0,-70 C-10,-60 -15,-30 0,0" transform="rotate(270)"/>
+    <path d="M0,0 C15,-30 10,-60 0,-70 C-10,-60 -15,-30 0,0" transform="rotate(315)"/>
+  </g>
+  <circle cx="185" cy="20" r="1.8" fill="currentColor" opacity="0.6"/>
+  <circle cx="215" cy="20" r="1.8" fill="currentColor" opacity="0.6"/>
+  <path d="M 240 20 L 380 20" stroke-width="0.8" stroke-dasharray="2 4" opacity="0.5"/>
+</svg>

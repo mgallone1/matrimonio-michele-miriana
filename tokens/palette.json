@@ -1,0 +1,48 @@
+{
+  "name": "Michele & Miriana Wedding Palette",
+  "source": "assets/palette/palette_matrimonio.jpg",
+  "extractedAt": "2026-11-14",
+  "colors": {
+    "espresso": {
+      "name": "Corteccia / Espresso Antico",
+      "hex": "#523c2f",
+      "rgb": [82, 60, 47],
+      "hsl": [22, 27, 25],
+      "usage": "Testi primari, tipografia serif di testa, contorni botanici d'accento ad alto contrasto"
+    },
+    "champagne": {
+      "name": "Seta Champagne / Carta d'Amalfi",
+      "hex": "#dacdbd",
+      "rgb": [218, 205, 189],
+      "hsl": [33, 29, 80],
+      "usage": "Sfondi caldi cotone/lino, card nobilitate, sfumature acquerello neutre"
+    },
+    "blush": {
+      "name": "Rosa Cipria / Dalia Blush",
+      "hex": "#bf9d9b",
+      "rgb": [191, 157, 155],
+      "hsl": [3, 22, 68],
+      "usage": "Accenti floreali, badge delicati, bagliori e hover delicati, bottoni secondari"
+    },
+    "sage": {
+      "name": "Verde Salvia Nobile / Foglia d'Ulivo Tana di Volpe",
+      "hex": "#4f523f",
+      "rgb": [79, 82, 63],
+      "hsl": [69, 13, 28],
+      "usage": "Elementi botanici, sezioni natura/tenuta, callout, dettagli foglie dalia"
+    },
+    "burgundy": {
+      "name": "Bordeaux Sovrano / Velluto Dalia Scarlatta",
+      "hex": "#530c1e",
+      "rgb": [83, 12, 30],
+      "hsl": [345, 75, 19],
+      "usage": "Call-to-Action primari (Conferma RSVP), monogramma M&M, date in evidenza"
+    }
+  },
+  "neutrals": {
+    "paper": "#FAF7F2",
+    "paper-tint": "#F5EFE6",
+    "paper-edge": "#E8DEC8",
+    "dark-contrast": "#281D17"
+  }
+}
