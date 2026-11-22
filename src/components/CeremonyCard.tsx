@@ -93,6 +93,21 @@ export const CeremonyCard: React.FC = () => {
             </div>
           </div>
 
+          {/* 
+            Acquerello autentico della facciata con l'edera
+            Con le stesse dimensioni e lo stesso sfocato morbido ai bordi della cappella
+          */}
+          <div className="mb-6 max-w-2xl mx-auto text-center px-2">
+            <div className="relative inline-block w-full">
+              <img
+                src="./images/casale_acquerello_sfumato.png"
+                alt="Facciata storica con edera di Tenuta Tana di Volpe ad acquerello"
+                className="w-full h-auto max-h-[380px] object-contain mx-auto filter contrast-[1.03]"
+                loading="lazy"
+              />
+            </div>
+          </div>
+
           <div className="flex flex-wrap items-center justify-center gap-3">
             <a
               href="#location"
