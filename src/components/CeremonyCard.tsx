@@ -33,62 +33,68 @@ export const CeremonyCard: React.FC = () => {
             La Nostra Giornata
           </h2>
 
-          <div className="mb-6 max-w-xl mx-auto">
+          <div className="mb-8 max-w-xl mx-auto">
             <p className="font-serif italic text-[#333333] text-base sm:text-lg font-light leading-relaxed">
               Saremo felici di accogliervi per celebrare insieme il momento del sì e proseguire con i festeggiamenti tra i giardini in fiore e il verde della tenuta.
             </p>
           </div>
 
           {/* 
-            Dalia chiara ad acquerello discreta ed elegante a cavallo della linea divisoria,
-            tagliata a filo con il bordo destro dello schermo (bleed edge), senza ingombro verticale
+            Griglia Informazioni fluida: Orario e Location a sinistra,
+            Composizione floreale verticale completa (dalia chiara, dalia burgundy, boccioli, steli e foglie) a destra
           */}
-          <div className="relative w-full">
-            <div className="absolute right-0 -top-6 sm:-top-8 translate-x-1/4 sm:translate-x-1/6 pointer-events-none select-none z-10 overflow-visible">
-              <img
-                src="./images/dalia_cerimonia_destra.png"
-                alt="Dalia chiara ad acquerello con foglioline"
-                className="w-12 sm:w-16 md:w-20 h-auto object-contain opacity-90"
-                loading="lazy"
-              />
-            </div>
-          </div>
+          <div className="relative border-y border-champagne/40 py-8 mb-8 overflow-hidden sm:overflow-visible">
+            <div className="grid grid-cols-1 md:grid-cols-12 gap-8 items-center text-left">
+              {/* Colonna Sinistra (7 col): Orario e Location */}
+              <div className="md:col-span-7 space-y-8 z-10">
+                {/* Orario */}
+                <div className="flex items-start gap-4">
+                  <div className="w-12 h-12 rounded-full bg-champagne/20 flex items-center justify-center shrink-0 text-burgundy mt-0.5 shadow-sm">
+                    <Clock className="w-5 h-5 text-burgundy" />
+                  </div>
+                  <div>
+                    <span className="text-[11px] uppercase tracking-wider text-sage font-medium font-sans block mb-1">
+                      Orario d'Inizio
+                    </span>
+                    <strong className="font-serif text-2xl text-[#1a1a1a] block font-medium">
+                      Ore 16:30
+                    </strong>
+                    <span className="text-xs text-[#555555] font-sans">
+                      Venerdì 2 Luglio 2027 • Accoglienza e cerimonia
+                    </span>
+                  </div>
+                </div>
 
-          {/* Griglia Informazioni fluida su fondo aperto */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 py-6 mb-8 text-left border-y border-champagne/40 relative">
-            {/* Orario */}
-            <div className="flex items-start gap-4">
-              <div className="w-11 h-11 rounded-full bg-champagne/20 flex items-center justify-center shrink-0 text-burgundy mt-0.5">
-                <Clock className="w-5 h-5 text-burgundy" />
+                {/* Divisore interno leggero */}
+                <div className="border-t border-champagne/30 pt-6">
+                  {/* Luogo */}
+                  <div className="flex items-start gap-4">
+                    <div className="w-12 h-12 rounded-full bg-champagne/20 flex items-center justify-center shrink-0 text-sage mt-0.5 shadow-sm">
+                      <MapPin className="w-5 h-5 text-sage" />
+                    </div>
+                    <div>
+                      <span className="text-[11px] uppercase tracking-wider text-sage font-medium font-sans block mb-1">
+                        Location
+                      </span>
+                      <strong className="font-serif text-2xl text-[#1a1a1a] block font-medium">
+                        Tenuta Tana di Volpe
+                      </strong>
+                      <span className="text-xs text-[#555555] font-sans">
+                        Via Provinciale, 19 • Matinella di Albanella (SA)
+                      </span>
+                    </div>
+                  </div>
+                </div>
               </div>
-              <div>
-                <span className="text-[11px] uppercase tracking-wider text-sage font-medium font-sans block mb-0.5">
-                  Orario d'Inizio
-                </span>
-                <strong className="font-serif text-xl text-[#1a1a1a] block font-medium">
-                  Ore 16:30
-                </strong>
-                <span className="text-xs text-[#555555] font-sans">
-                  Venerdì 2 Luglio 2027 • Accoglienza e cerimonia
-                </span>
-              </div>
-            </div>
 
-            {/* Luogo */}
-            <div className="flex items-start gap-4 sm:border-l sm:border-champagne/40 sm:pl-8">
-              <div className="w-11 h-11 rounded-full bg-champagne/20 flex items-center justify-center shrink-0 text-sage mt-0.5">
-                <MapPin className="w-5 h-5 text-sage" />
-              </div>
-              <div>
-                <span className="text-[11px] uppercase tracking-wider text-sage font-medium font-sans block mb-0.5">
-                  Location
-                </span>
-                <strong className="font-serif text-xl text-[#1a1a1a] block font-medium">
-                  Tenuta Tana di Volpe
-                </strong>
-                <span className="text-xs text-[#555555] font-sans">
-                  Via Provinciale, 19 • Matinella di Albanella (SA)
-                </span>
+              {/* Colonna Destra (5 col): Composizione botanica acquerellata verticale completa */}
+              <div className="md:col-span-5 flex justify-center md:justify-end items-center pointer-events-none select-none z-10 -my-4 md:-my-6">
+                <img
+                  src="./images/composizione_floreale_verticale.png"
+                  alt="Composizione botanica ad acquerello con dalie e boccioli"
+                  className="w-48 sm:w-56 md:w-full max-w-[280px] h-auto object-contain filter drop-shadow-sm"
+                  loading="lazy"
+                />
               </div>
             </div>
           </div>
