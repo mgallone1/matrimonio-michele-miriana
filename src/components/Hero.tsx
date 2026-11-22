@@ -2,13 +2,15 @@ import React from 'react';
 
 export const Hero: React.FC = () => {
   return (
-    <header className="relative pt-24 sm:pt-28 pb-8 sm:pb-12 px-4 text-center overflow-hidden flex flex-col items-center justify-center bg-white">
+    <header className="relative pt-28 sm:pt-32 pb-8 sm:pb-12 px-4 text-center overflow-hidden flex flex-col items-center justify-center bg-white">
       {/* 
-        Angolo Floreale Botanico (Proposta A a Destra con foglie complete a punte naturali):
-        Collocato nell'angolo superiore destro, con foglie che terminano organicamente senza alcun taglio netto.
-        Dimensione calibrata su mobile (w-[180px] sm:w-[260px] md:w-[340px]) per non invadere lo spazio del testo.
+        Angolo Floreale Botanico portato in ALTO a filo e calibrato:
+        - Su mobile: portato a filo superiore con offset negativo (-top-4 sm:-top-6) 
+          e larghezza controllata (w-[145px] sm:w-[220px] md:w-[280px])
+        - In questo modo i fiori rimangono confinati nel vertice superiore destro 
+          e non scendono mai a intersecare o toccare 'Partecipazione di Nozze' e 'Michele'
       */}
-      <div className="absolute top-0 right-0 w-[180px] sm:w-[260px] md:w-[340px] pointer-events-none select-none z-0">
+      <div className="absolute -top-3 sm:-top-5 -right-2 sm:-right-3 w-[145px] sm:w-[210px] md:w-[270px] pointer-events-none select-none z-0">
         <img
           src="./images/corner_floreale_top_right.png"
           alt="Angolo floreale di dalie ad acquerello"
