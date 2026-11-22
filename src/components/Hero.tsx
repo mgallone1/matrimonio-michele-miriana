@@ -20,23 +20,24 @@ export const Hero: React.FC = () => {
       </div>
 
       <div className="max-w-3xl mx-auto relative z-10 w-full">
-        {/* Sovratitolo in Verde Salvia Nobile (#626a3a) */}
-        <p className="font-sans text-xs uppercase tracking-[0.35em] text-sage font-medium mb-1">
-          Partecipazione di Nozze
-        </p>
-
         {/* 
-          Fregio floreale orizzontale lineare:
-          Dalie distanziate con ariose foglie di salvia ed eucalipto acquerellate
+          Cornice floreale di Dalie in alto:
+          Corolle più grandi, distanziate ed eleganti con foglie di salvia ed eucalipto,
+          posizionata in cima sopra la scritta Partecipazione di Nozze
         */}
-        <div className="max-w-sm sm:max-w-md md:max-w-lg mx-auto -my-1 sm:my-0 pointer-events-none select-none">
+        <div className="max-w-md sm:max-w-xl md:max-w-2xl mx-auto mb-2 sm:mb-3 pointer-events-none select-none">
           <img
-            src="./images/fregio_dalie_lineare.png"
-            alt="Dalie acquerellate distanziate con foglie"
-            className="w-full h-auto object-contain filter drop-shadow-sm opacity-90"
+            src="./images/cornice_dalie_alta.png"
+            alt="Cornice botanica di dalie in alto"
+            className="w-full h-auto object-contain filter drop-shadow-sm opacity-95"
             loading="eager"
           />
         </div>
+
+        {/* Sovratitolo in Verde Salvia Nobile (#626a3a) */}
+        <p className="font-sans text-xs uppercase tracking-[0.35em] text-sage font-medium mb-3">
+          Partecipazione di Nozze
+        </p>
 
         {/* NOMI CENTRALI GRANDI con Great Vibes in Bordeaux nobile (#4a0d1b) */}
         <h1 className="font-script text-5xl sm:text-7xl md:text-8xl text-burgundy font-normal leading-tight mb-4 select-none drop-shadow-sm">
