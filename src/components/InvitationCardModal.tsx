@@ -56,14 +56,13 @@ export const InvitationCardModal: React.FC<InvitationCardModalProps> = ({ isOpen
         {/* Contenuto dell'invito con z-10 */}
         <div className="relative z-10 w-full flex flex-col items-center">
           {/* 
-            Al posto del tatuaggio: Solo il fiore della dalia chiara in primo piano,
-            senza foglie né gambo, grande e protagonista
+            Tatuaggio acquerellato Michele & Miriana
           */}
-          <div className="flex justify-center mb-3 sm:mb-4 pointer-events-none select-none">
+          <div className="flex justify-center mb-4 sm:mb-5 pointer-events-none select-none">
             <img
-              src="./images/dalia_chiara_invito.png"
-              alt="Dalia chiara ad acquerello in primo piano"
-              className="w-32 h-32 sm:w-40 sm:h-40 md:w-44 md:h-44 object-contain filter contrast-[1.03] drop-shadow-sm transition-transform hover:scale-105 duration-300"
+              src="./images/tatuaggio_acquerello_invito.png"
+              alt="Tatuaggio Michele e Miriana ad acquerello"
+              className="w-32 h-28 sm:w-40 sm:h-36 md:w-44 md:h-40 object-contain filter drop-shadow-sm transition-transform hover:scale-105 duration-300"
               loading="eager"
             />
           </div>
