@@ -44,8 +44,8 @@ export const Hero: React.FC = () => {
         </h1>
 
         {/* Frase romantica direttamente sotto i nomi, senza elementi intermedi */}
-        <p className="font-serif italic text-[#1a1a1a] text-base sm:text-xl max-w-lg mx-auto mb-4 font-light leading-relaxed">
-          «Una promessa che dura per sempre, una festa che comincia oggi insieme a voi.»
+        <p className="font-serif italic text-[#1a1a1a] text-base sm:text-xl max-w-xl mx-auto mb-4 font-light leading-relaxed">
+          &ldquo;E se la vita &egrave; un viaggio fatto di strade imprevedibili, noi abbiamo scelto di percorrerle insieme, tenendoci per mano, ogni giorno.&rdquo;
         </p>
 
         {/* Data del matrimonio senza riquadro, in font script Alex Brush come i nomi */}
