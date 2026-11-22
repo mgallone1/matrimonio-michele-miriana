@@ -39,32 +39,18 @@ export const Hero: React.FC = () => {
         </p>
 
         {/* 
-          COMPOSIZIONE ARTISTICA NOMI CON & SCENOGRAFICA SOVRAPPOSTA:
-          Michele in alto a sinistra con la & gigante e più chiara a fianco,
-          che scende verso il basso intersecando con grazia le lettere di Miriana senza coprirle
+          COMPOSIZIONE ARTISTICA NOMI CON & INTRECCIATA (OVER & UNDER WOVEN MONOGRAM):
+          Michele in alto a sinistra, Miriana in basso a destra, con la & gigante e più chiara
+          posizionata esattamente al centro in X e Y, che passa SOPRA e SOTTO le lettere
+          intersecandole elegantemente senza coprirle.
         */}
-        <h1 className="font-script select-none drop-shadow-sm mb-4 max-w-lg mx-auto relative text-burgundy font-normal">
-          {/* Prima riga: Michele + Ampersand gigante integrata */}
-          <div className="flex items-baseline justify-center sm:justify-start pl-2 sm:pl-10 relative">
-            <span className="text-6xl sm:text-7xl md:text-8xl leading-none tracking-wide z-10 relative">
-              Michele
-            </span>
-            {/* 
-              Ampersand & gigante: posizionata di fianco a Michele, 
-              scende morbidamente verso il basso, con colore più chiaro (cipria/rosato #dca68e o bordeaux semitrasparente)
-              e opacità calibrata (mix-blend-multiply) per intersecare Miriana con perfetta leggibilità
-            */}
-            <span className="font-serif italic text-7xl sm:text-8xl md:text-9xl text-[#c78d75]/60 absolute left-[56%] sm:left-[52%] top-[-8px] sm:top-[-14px] leading-none pointer-events-none z-0 select-none mix-blend-multiply">
-              &amp;
-            </span>
-          </div>
-
-          {/* Seconda riga: Miriana spostata a destra che interseca la curva inferiore della & */}
-          <div className="flex justify-center sm:justify-end pr-2 sm:pr-8 -mt-2 sm:-mt-4 relative z-10">
-            <span className="text-6xl sm:text-7xl md:text-8xl leading-none tracking-wide">
-              Miriana
-            </span>
-          </div>
+        <h1 className="select-none mb-3 sm:mb-4 max-w-xl mx-auto flex items-center justify-center">
+          <img
+            src="./images/michele_ampersand_miriana_intreccio.png"
+            alt="Michele &amp; Miriana"
+            className="w-full max-w-[420px] sm:max-w-[540px] md:max-w-[620px] h-auto object-contain filter drop-shadow-sm select-none"
+            loading="eager"
+          />
         </h1>
 
         {/* Frase romantica direttamente sotto i nomi, senza elementi intermedi */}
