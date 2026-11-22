@@ -40,59 +40,59 @@ export const CeremonyCard: React.FC = () => {
           </div>
 
           {/* 
-            Griglia Informazioni: Orario e Location a sinistra,
-            Composizione floreale verticale di fianco a destra ANCHE SU IPHONE (flex row affiancato sempre)
+            Griglia Informazioni: Orario e Location a sinistra (scritte ben visibili e generose),
+            Composizione floreale verticale con trasparenza pura a destra
           */}
-          <div className="relative border-y border-champagne/40 py-6 sm:py-8 mb-8">
+          <div className="relative border-y border-champagne/40 py-7 sm:py-9 mb-8">
             <div className="flex flex-row items-center justify-between gap-3 sm:gap-6 text-left">
-              {/* Parte Sinistra (62%): Orario e Location */}
-              <div className="flex-1 space-y-5 sm:space-y-6 z-10 min-w-0">
+              {/* Parte Sinistra (65%): Orario e Location ingranditi e leggibili */}
+              <div className="flex-1 space-y-6 sm:space-y-7 z-10 min-w-0">
                 {/* Orario */}
-                <div className="flex items-start gap-2.5 sm:gap-4">
-                  <div className="w-9 h-9 sm:w-11 sm:h-11 rounded-full bg-champagne/20 flex items-center justify-center shrink-0 text-burgundy mt-0.5">
-                    <Clock className="w-4 h-4 sm:w-5 sm:h-5 text-burgundy" />
+                <div className="flex items-start gap-3 sm:gap-4">
+                  <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-champagne/20 flex items-center justify-center shrink-0 text-burgundy mt-0.5 shadow-sm">
+                    <Clock className="w-5 h-5 text-burgundy" />
                   </div>
                   <div className="min-w-0">
-                    <span className="text-[10px] sm:text-xs uppercase tracking-wider text-sage font-medium font-sans block mb-0.5 sm:mb-1">
+                    <span className="text-[11px] sm:text-xs uppercase tracking-wider text-sage font-medium font-sans block mb-1">
                       Orario d'Inizio
                     </span>
-                    <strong className="font-serif text-lg sm:text-2xl text-[#1a1a1a] block font-medium leading-tight">
+                    <strong className="font-serif text-xl sm:text-2xl md:text-3xl text-[#1a1a1a] block font-medium leading-snug">
                       Ore 16:30
                     </strong>
-                    <span className="text-[11px] sm:text-xs text-[#555555] font-sans block leading-tight mt-0.5">
-                      Venerdì 2 Luglio 2027
+                    <span className="text-xs sm:text-sm text-[#555555] font-sans block leading-relaxed mt-0.5">
+                      Venerdì 2 Luglio 2027 • Accoglienza e cerimonia
                     </span>
                   </div>
                 </div>
 
                 {/* Divisore interno */}
-                <div className="border-t border-champagne/30 pt-4 sm:pt-5">
+                <div className="border-t border-champagne/30 pt-5 sm:pt-6">
                   {/* Luogo */}
-                  <div className="flex items-start gap-2.5 sm:gap-4">
-                    <div className="w-9 h-9 sm:w-11 sm:h-11 rounded-full bg-champagne/20 flex items-center justify-center shrink-0 text-sage mt-0.5">
-                      <MapPin className="w-4 h-4 sm:w-5 sm:h-5 text-sage" />
+                  <div className="flex items-start gap-3 sm:gap-4">
+                    <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-champagne/20 flex items-center justify-center shrink-0 text-sage mt-0.5 shadow-sm">
+                      <MapPin className="w-5 h-5 text-sage" />
                     </div>
                     <div className="min-w-0">
-                      <span className="text-[10px] sm:text-xs uppercase tracking-wider text-sage font-medium font-sans block mb-0.5 sm:mb-1">
+                      <span className="text-[11px] sm:text-xs uppercase tracking-wider text-sage font-medium font-sans block mb-1">
                         Location
                       </span>
-                      <strong className="font-serif text-lg sm:text-2xl text-[#1a1a1a] block font-medium leading-tight">
+                      <strong className="font-serif text-xl sm:text-2xl md:text-3xl text-[#1a1a1a] block font-medium leading-snug">
                         Tenuta Tana di Volpe
                       </strong>
-                      <span className="text-[11px] sm:text-xs text-[#555555] font-sans block leading-tight mt-0.5">
-                        Matinella di Albanella (SA)
+                      <span className="text-xs sm:text-sm text-[#555555] font-sans block leading-relaxed mt-0.5">
+                        Via Provinciale, 19 • Matinella di Albanella (SA)
                       </span>
                     </div>
                   </div>
                 </div>
               </div>
 
-              {/* Parte Destra (38%): Composizione floreale proporzionata sempre a fianco anche su iPhone */}
-              <div className="w-[105px] sm:w-36 md:w-44 shrink-0 flex justify-end items-center pointer-events-none select-none z-10 pl-1">
+              {/* Parte Destra (35%): Composizione floreale verticale a trasparenza pura 100% */}
+              <div className="w-[100px] sm:w-36 md:w-44 shrink-0 flex justify-end items-center pointer-events-none select-none z-10 pl-1">
                 <img
                   src="./images/composizione_floreale_verticale.png"
                   alt="Composizione botanica ad acquerello con dalie e boccioli"
-                  className="w-full h-auto max-h-[220px] sm:max-h-[280px] object-contain drop-shadow-sm"
+                  className="w-full h-auto max-h-[220px] sm:max-h-[290px] object-contain"
                   loading="lazy"
                 />
               </div>
