@@ -39,18 +39,34 @@ export const Hero: React.FC = () => {
         </p>
 
         {/* 
-          COMPOSIZIONE ARTISTICA NOMI CON & INTRECCIATA (OVER & UNDER WOVEN MONOGRAM):
-          Michele in alto a sinistra, Miriana in basso a destra, con la & gigante e più chiara
-          posizionata esattamente al centro in X e Y, che passa SOPRA e SOTTO le lettere
-          intersecandole elegantemente senza coprirle.
+          NOMI IN CORSIVO ORIGINALE ALEX BRUSH (Michele in alto a sinistra, Miriana in basso a destra)
+          con la & gigante posizionata esattamente al centro in X e Y, posta SOTTO come livello
+          e con il colore della dalia chiara in alto a sinistra (#d2928d / #e8a59f)
         */}
-        <h1 className="select-none mb-3 sm:mb-4 max-w-xl mx-auto flex items-center justify-center">
-          <img
-            src="./images/michele_ampersand_miriana_intreccio.png"
-            alt="Michele &amp; Miriana"
-            className="w-full max-w-[420px] sm:max-w-[540px] md:max-w-[620px] h-auto object-contain filter drop-shadow-sm select-none"
-            loading="eager"
-          />
+        <h1 className="font-script text-burgundy font-normal select-none drop-shadow-sm mb-4 tracking-wide max-w-md mx-auto relative">
+          {/* 
+            La & gigante al centro perfetto (X e Y):
+            Posta SOTTO come livello (z-0), con il colore rosato cipria della dalia chiara in alto a sinistra
+          */}
+          <span 
+            className="font-serif italic text-7xl sm:text-8xl md:text-9xl text-[#d2928d]/70 absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 leading-none pointer-events-none z-0 select-none"
+            aria-hidden="true"
+          >
+            &amp;
+          </span>
+
+          {/* Michele in alto a sinistra, z-10 sopra la & */}
+          <span className="block text-center -translate-x-6 sm:-translate-x-12 text-6xl sm:text-7xl md:text-8xl leading-none relative z-10">
+            Michele
+          </span>
+
+          {/* Spazio verticale armonico */}
+          <div className="h-2 sm:h-4" />
+
+          {/* Miriana in basso a destra, z-10 sopra la & */}
+          <span className="block text-center translate-x-6 sm:translate-x-12 text-6xl sm:text-7xl md:text-8xl leading-none relative z-10">
+            Miriana
+          </span>
         </h1>
 
         {/* Frase romantica direttamente sotto i nomi, senza elementi intermedi */}
