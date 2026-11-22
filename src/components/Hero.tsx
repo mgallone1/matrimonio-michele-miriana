@@ -2,7 +2,7 @@ import React from 'react';
 
 export const Hero: React.FC = () => {
   return (
-    <header className="relative pt-44 sm:pt-48 md:pt-52 pb-8 sm:pb-12 px-4 text-center overflow-hidden flex flex-col items-center justify-center bg-white">
+    <header className="relative pt-28 sm:pt-32 md:pt-36 pb-8 sm:pb-12 px-4 text-center overflow-hidden flex flex-col items-center justify-center bg-white">
       {/* 
         Ghirlanda Floreale Botanica di Dalie e Fogliame zoomata dall'angolo:
         - I fiori principali partono direttamente dall'angolo superiore destro (tagliati a filo in alto e a destra per dare massimo zoom e presenza scultorea)
@@ -35,10 +35,10 @@ export const Hero: React.FC = () => {
       </div>
 
       {/* 
-        Contenitore Testi abbassato (pt-24 su mobile) per garantire spazio d'aria aureo
-        e zero sovrapposizioni tra il fiore nell'angolo e 'Partecipazione di Nozze' / 'Michele'
+        Contenitore Testi compatto e armonico:
+        Posizionato più in alto per evitare spreco di spazio verticale e incorniciato con eleganza sotto il bouquet.
       */}
-      <div className="max-w-3xl mx-auto relative z-10 w-full mt-4 sm:mt-6">
+      <div className="max-w-3xl mx-auto relative z-10 w-full mt-1 sm:mt-2">
         {/* Sovratitolo in Verde Salvia Nobile (#626a3a) con spaziatura inferiore aurea aumentata */}
         <p className="font-sans text-xs uppercase tracking-[0.35em] text-sage font-medium mb-3 sm:mb-4">
           Partecipazione di Nozze
