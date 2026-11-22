@@ -5,16 +5,16 @@ export const CeremonyCard: React.FC = () => {
   return (
     <section id="cerimonia" className="pt-2 pb-10 sm:pb-14 px-4 max-w-4xl mx-auto scroll-mt-6 bg-white">
       {/* 
-        Acquerello autentico della Cappella storica con bouganville 
+        Acquerello autentico della Cappella storica con gli sposi 
         Sfumato con effetto delicato ai bordi senza stacchi netti o riquadri
       */}
       <div className="mb-6 max-w-2xl mx-auto text-center px-2">
         <div className="relative inline-block w-full">
           <img
-            src="./images/cappella_acquerello_sfumato.png"
-            alt="Tenuta Tana di Volpe dipinta ad acquerello"
+            src="./images/cappella_acquerello_sposi_v2.png"
+            alt="Tenuta Tana di Volpe dipinta ad acquerello con gli sposi"
             className="w-full h-auto max-h-[380px] object-contain mx-auto filter contrast-[1.03]"
-            loading="lazy"
+            loading="eager"
           />
           <p className="font-serif italic text-sm sm:text-base text-[#444444] mt-2 font-normal tracking-wide">
             Tenuta Tana di Volpe
