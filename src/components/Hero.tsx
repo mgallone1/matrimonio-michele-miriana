@@ -26,14 +26,14 @@ export const Hero: React.FC = () => {
         </p>
 
         {/* 
-          Cornice / Arco di sole corolle di Dalie (senza steli né gambi):
-          Disposta subito sopra i nomi di Michele & Miriana con grazia ed equilibrio
+          Fregio floreale orizzontale lineare:
+          Dalie distanziate con ariose foglie di salvia ed eucalipto acquerellate
         */}
-        <div className="max-w-xs sm:max-w-sm md:max-w-md mx-auto my-1 pointer-events-none select-none">
+        <div className="max-w-sm sm:max-w-md md:max-w-lg mx-auto -my-1 sm:my-0 pointer-events-none select-none">
           <img
-            src="./images/cornice_dalie_nomi.png"
-            alt="Cornice di dalie fiorite"
-            className="w-full h-auto object-contain filter drop-shadow-sm opacity-95"
+            src="./images/fregio_dalie_lineare.png"
+            alt="Dalie acquerellate distanziate con foglie"
+            className="w-full h-auto object-contain filter drop-shadow-sm opacity-90"
             loading="eager"
           />
         </div>
