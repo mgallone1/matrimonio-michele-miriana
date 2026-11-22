@@ -5,7 +5,6 @@ import { Hero } from './components/Hero';
 import { CeremonyCard } from './components/CeremonyCard';
 import { Countdown } from './components/Countdown';
 import { Timeline } from './components/Timeline';
-import { DahliaAtmosphereSection } from './components/DahliaAtmosphereSection';
 import { LocationSection } from './components/LocationSection';
 import { FaqSection } from './components/FaqSection';
 import { GiftSection } from './components/GiftSection';
@@ -39,7 +38,6 @@ export const App: React.FC = () => {
   const navLinks = [
     { href: '#cerimonia', label: 'Cerimonia e Ricevimento', icon: Calendar },
     { href: '#timeline', label: 'Programma della Giornata', icon: Calendar },
-    { href: '#dalie', label: 'I Nostri Fiori: Le Dalie', icon: Calendar },
     { href: '#location', label: 'La Tenuta e Indicazioni', icon: MapPin },
     { href: '#faq', label: 'FAQ, Dress Code e Alloggi', icon: HelpCircle },
     { href: '#gift', label: 'Lista Nozze e Coordinate IBAN', icon: Gift },
@@ -202,7 +200,6 @@ export const App: React.FC = () => {
           <CeremonyCard />
           <Countdown />
           <Timeline />
-          <DahliaAtmosphereSection />
           <LocationSection />
           <FaqSection />
           <GiftSection />

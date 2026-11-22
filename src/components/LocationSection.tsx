@@ -4,37 +4,37 @@ import { ExternalLink, Navigation, MapPin } from 'lucide-react';
 export const LocationSection: React.FC = () => {
   const [activePhoto, setActivePhoto] = useState<number>(0);
 
-  // Foto reali della Tenuta Tana di Volpe con didascalie corrette
+  // Foto reali della Tenuta Tana di Volpe con descrizioni fedeli a ciascuno scatto
   const photos = [
+    {
+      src: './images/cappella_storica.jpg',
+      webp: './images/webp/cappella_storica.webp',
+      title: 'La Cappella Storica e la Torre',
+      subtitle: 'L’antico torrione circolare in pietra avvolto dalla bouganville in fiore, simbolo della tenuta',
+    },
     {
       src: './images/casale_facciata_luci.jpg',
       webp: './images/webp/casale_facciata_luci.webp',
-      title: 'Il Casale Principale',
-      subtitle: 'La facciata in pietra viva e il piazzale per il ricevimento serale',
+      title: 'La Corte in Pietra del Casale',
+      subtitle: 'La corte pavimentata e la facciata rustica del casale principale immerso nel verde',
     },
     {
       src: './images/giardino_bouganville.jpg',
       webp: './images/webp/giardino_bouganville.webp',
-      title: 'I Giardini in Fiore',
-      subtitle: 'Bouganville fiorite, essenze mediterranee e scorci panoramici',
+      title: 'Il Portico e l’Area Relax',
+      subtitle: 'Lo spazio coperto con arredi caldi e dettagli in cotto affacciato sulla corte',
     },
     {
-      src: './images/parco_scenografico.jpg',
-      webp: './images/webp/parco_scenografico.webp',
-      title: 'Il Parco Panoramico',
-      subtitle: 'Viali alberati e colline che guardano verso la piana di Paestum',
-    },
-    {
-      src: './images/cappella_storica.jpg',
-      webp: './images/webp/cappella_storica.webp',
-      title: 'La Torre e Cappella Storica',
-      subtitle: 'L’antico torrione circolare avvolto dal verde, simbolo della tenuta',
+      src: './images/parco_prato_all_inglese.jpg',
+      webp: './images/webp/parco_prato_all_inglese.webp',
+      title: 'Il Grande Prato all’Inglese',
+      subtitle: 'L’ampia distesa verde con alberi secolari e vista aperta sulle colline di Albanella',
     },
   ];
 
   const fullAddress = 'Via Provinciale, 19, 84044 Matinella di Albanella SA';
-  const googleMapsUrl = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent('Tenuta Tana di Volpe, Via Provinciale 19, Matinella di Albanella SA')}`;
-  const appleMapsUrl = `https://maps.apple.com/?q=${encodeURIComponent('Tenuta Tana di Volpe, Via Provinciale 19, Matinella di Albanella SA')}`;
+  const googleMapsUrl = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent('Via Provinciale, 19, Matinella, 84044 Albanella SA')}`;
+  const appleMapsUrl = `https://maps.apple.com/?q=${encodeURIComponent('Via Provinciale, 19, Matinella, 84044 Albanella SA')}`;
 
   return (
     <section id="location" className="py-12 sm:py-16 px-4 max-w-5xl mx-auto scroll-mt-8 bg-white">
@@ -155,11 +155,11 @@ export const LocationSection: React.FC = () => {
           </div>
         </div>
 
-        {/* Riquadro Mappa Embed centrato su Matinella di Albanella */}
+        {/* Riquadro Mappa Embed centrato esattamente su Via Provinciale 19, Matinella di Albanella */}
         <div className="rounded-3xl overflow-hidden border border-champagne shadow-sm bg-white min-h-[320px] relative">
           <iframe
-            title="Mappa Tenuta Tana di Volpe, Via Provinciale 19, Matinella di Albanella"
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3036.879893504313!2d15.08332157643547!3d40.48906915124016!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x13395914fa65b6bf%3A0xe5ea8cb83bf0c202!2sTenuta%20Tana%20di%20Volpe!5e0!3m2!1sit!2sit!4v1700000000000!5m2!1sit!2sit"
+            title="Mappa Posizione Esatta: Via Provinciale 19, Matinella di Albanella"
+            src="https://maps.google.com/maps?q=Via%20Provinciale%2C%2019%2C%20Matinella%2C%2084044%20Albanella%20SA&t=&z=16&ie=UTF8&iwloc=&output=embed"
             width="100%"
             height="100%"
             className="w-full h-full min-h-[340px] border-0"
