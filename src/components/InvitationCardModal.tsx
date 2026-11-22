@@ -1,6 +1,5 @@
 import React, { useRef } from 'react';
 import gsap from 'gsap';
-import { TattooHeart } from './TattooHeart';
 import { Sparkles } from 'lucide-react';
 
 interface InvitationCardModalProps {
@@ -54,24 +53,18 @@ export const InvitationCardModal: React.FC<InvitationCardModalProps> = ({ isOpen
         ref={cardRef}
         className="relative w-full max-w-lg bg-white rounded-3xl p-8 sm:p-12 border border-champagne shadow-2xl text-center overflow-hidden flex flex-col items-center justify-center my-auto"
       >
-        {/* 
-          I due fiori scelti (solo quello scuro e quello chiaro):
-          Accento floreale discreto ed elegante in alto a destra
-        */}
-        <div className="absolute top-0 right-0 w-28 sm:w-36 pointer-events-none select-none z-0">
-          <img
-            src="./images/due_dalie_invito.png"
-            alt=""
-            className="w-full h-auto object-contain filter contrast-[1.02] opacity-90"
-            loading="eager"
-          />
-        </div>
-
         {/* Contenuto dell'invito con z-10 */}
         <div className="relative z-10 w-full flex flex-col items-center">
-          {/* Il Simbolo Ufficiale: Il Tatuaggio Cuore M & M */}
-          <div className="flex justify-center mb-5 sm:mb-6">
-            <TattooHeart className="w-14 h-14 sm:w-16 sm:h-16 text-burgundy transition-transform hover:scale-105 duration-300" />
+          {/* 
+            Al posto del tatuaggio: Dalia chiara ad acquerello abbastanza grande e luminosa
+          */}
+          <div className="flex justify-center mb-4 sm:mb-5 pointer-events-none select-none">
+            <img
+              src="./images/dalia_chiara_invito.png"
+              alt="Dalia chiara ad acquerello"
+              className="w-24 h-24 sm:w-32 sm:h-32 object-contain filter contrast-[1.03] drop-shadow-sm transition-transform hover:scale-105 duration-300"
+              loading="eager"
+            />
           </div>
 
           {/* 
@@ -81,7 +74,7 @@ export const InvitationCardModal: React.FC<InvitationCardModalProps> = ({ isOpen
             Michele &amp; Miriana
           </h1>
 
-          {/* Frase richiesta: 'hanno il piacere di invitarvi al loro matrimonio' */}
+          {/* Frase richiesta: 'Hanno il piacere di invitarvi al loro matrimonio' */}
           <p className="font-serif italic text-[#2c2c2c] text-base sm:text-lg max-w-xs sm:max-w-sm mx-auto mb-6 sm:mb-8 font-light leading-relaxed">
             Hanno il piacere di invitarvi al loro matrimonio
           </p>
