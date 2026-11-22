@@ -5,13 +5,13 @@ export const Hero: React.FC = () => {
     <header className="relative pt-0 pb-6 sm:pb-8 px-4 text-center overflow-hidden flex flex-col items-center justify-center bg-white">
       {/* 
         Fregio / Banner floreale dritto edge-to-edge a tutta larghezza in cima:
-        Copre tutta la parte superiore orizzontale senza essere curvo, estendendosi fino ai lati
+        Con sfumatura morbida ai bordi (stile acquerello cappella) per fondersi dolcemente con lo sfondo bianco
       */}
-      <div className="w-full max-w-5xl mx-auto -mt-2 sm:-mt-4 mb-1 pointer-events-none select-none z-10">
+      <div className="w-full max-w-5xl mx-auto -mt-2 sm:-mt-4 mb-1 pointer-events-none select-none z-10 px-0 sm:px-2">
         <img
-          src="./images/fregio_dalie_top_banner.png"
-          alt="Bordo floreale di dalie a tutta larghezza"
-          className="w-full h-auto object-cover max-h-[160px] sm:max-h-[220px] object-top filter drop-shadow-sm opacity-95"
+          src="./images/fregio_dalie_top_sfumato.png"
+          alt="Bordo floreale di dalie sfumato ad acquerello"
+          className="w-full h-auto object-cover max-h-[160px] sm:max-h-[220px] object-top filter contrast-[1.02] opacity-95"
           loading="eager"
         />
       </div>
