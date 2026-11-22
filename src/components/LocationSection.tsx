@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import { ExternalLink, Navigation } from 'lucide-react';
-import { DahliaFlower } from './DahliaFlower';
 
 export const LocationSection: React.FC = () => {
   const [activePhoto, setActivePhoto] = useState<number>(0);
@@ -36,24 +35,21 @@ export const LocationSection: React.FC = () => {
   const appleMapsUrl = 'https://maps.apple.com/?q=Tenuta+Tana+di+Volpe+Albanella';
 
   return (
-    <section id="location" className="py-20 px-4 max-w-5xl mx-auto scroll-mt-10 bg-white">
-      <div className="text-center mb-16">
-        <p className="font-sans text-xs uppercase tracking-[0.35em] text-sage font-medium mb-3">
+    <section id="location" className="py-12 sm:py-16 px-4 max-w-5xl mx-auto scroll-mt-8 bg-white">
+      <div className="text-center mb-8 sm:mb-10">
+        <p className="font-sans text-xs uppercase tracking-[0.35em] text-sage font-medium mb-2">
           La Cornice delle Nozze
         </p>
         <h2 className="font-serif text-3xl sm:text-5xl text-[#1a1a1a] font-normal">
           Tenuta Tana di Volpe
         </h2>
-        <p className="font-sans text-xs uppercase tracking-[0.25em] text-sage font-medium mt-2">
+        <p className="font-sans text-xs uppercase tracking-[0.25em] text-sage font-medium mt-1.5">
           Albanella (Salerno) • Cilento
         </p>
-        <div className="floral-divider">
-          <DahliaFlower size={18} />
-        </div>
       </div>
 
       {/* Galleria Scenografica in Bianco Puro con bordo Champagne (#dacdbd) */}
-      <div className="p-4 sm:p-6 mb-12 rounded-3xl white-card">
+      <div className="p-4 sm:p-6 mb-10 rounded-3xl white-card">
         <div className="relative rounded-2xl overflow-hidden aspect-[16/10] sm:aspect-[21/9] mb-4 bg-espresso/5">
           <picture className="w-full h-full">
             <source srcSet={photos[activePhoto].webp} type="image/webp" />
@@ -99,7 +95,7 @@ export const LocationSection: React.FC = () => {
         </div>
       </div>
 
-      {/* Info Logistica & Mappa */}
+      {/* Info Logistica e Mappa */}
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-stretch">
         <div className="p-8 sm:p-10 rounded-3xl white-card flex flex-col justify-between">
           <div>
@@ -124,7 +120,7 @@ export const LocationSection: React.FC = () => {
             </div>
           </div>
 
-          {/* Pulsanti Navigazione (Google Maps e Apple Maps, escluso Waze) */}
+          {/* Pulsanti Navigazione (Google Maps e Apple Maps) */}
           <div className="grid grid-cols-2 gap-3">
             <a
               href={googleMapsUrl}

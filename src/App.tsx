@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
 import { InvitationCardModal } from './components/InvitationCardModal';
 import { Hero } from './components/Hero';
 import { CeremonyCard } from './components/CeremonyCard';
@@ -35,11 +36,11 @@ export const App: React.FC = () => {
   };
 
   const navLinks = [
-    { href: '#cerimonia', label: 'Cerimonia & Ricevimento', icon: Calendar },
+    { href: '#cerimonia', label: 'Cerimonia e Ricevimento', icon: Calendar },
     { href: '#timeline', label: 'Programma della Giornata', icon: Calendar },
-    { href: '#location', label: 'La Tenuta & Indicazioni', icon: MapPin },
-    { href: '#faq', label: 'FAQ, Dress Code & Alloggi', icon: HelpCircle },
-    { href: '#gift', label: 'Lista Nozze & Coordinate IBAN', icon: Gift },
+    { href: '#location', label: 'La Tenuta e Indicazioni', icon: MapPin },
+    { href: '#faq', label: 'FAQ, Dress Code e Alloggi', icon: HelpCircle },
+    { href: '#gift', label: 'Lista Nozze e Coordinate IBAN', icon: Gift },
     { href: '#rsvp', label: 'Conferma Presenza (RSVP)', icon: Send, highlight: true },
   ];
 
@@ -53,9 +54,9 @@ export const App: React.FC = () => {
           Barra di Navigazione:
           - Logo Tatuaggio M&M sulla sinistra
           - Menu orizzontale discreto al centro
-          - Icona Toast a 3 righe pulita SENZA cerchio invasivo sulla destra
+          - Icona Hamburger a 3 righe pulita SENZA cerchio
         */}
-        <nav className="sticky top-0 z-40 bg-white/95 backdrop-blur-md border-b border-champagne/60 py-3 px-4 sm:px-8">
+        <nav className="sticky top-0 z-40 bg-white/95 backdrop-blur-md border-b border-champagne/60 py-2.5 px-4 sm:px-8">
           <div className="max-w-6xl mx-auto flex items-center justify-between">
             {/* Colonna Sinistra: Logo Tatuaggio M&M */}
             <div className="flex items-center">
@@ -80,14 +81,14 @@ export const App: React.FC = () => {
                 La Tenuta
               </a>
               <a href="#faq" className="hover:text-burgundy transition-colors py-1">
-                Info &amp; FAQ
+                Info e FAQ
               </a>
               <a href="#gift" className="hover:text-burgundy transition-colors py-1">
                 Lista Nozze
               </a>
             </div>
 
-            {/* Colonna Destra: Toast pulito a 3 righe SENZA cerchio né sfondi pesanti */}
+            {/* Colonna Destra: Hamburger a 3 righe minimale e senza cerchio */}
             <div className="flex items-center">
               <button
                 type="button"
@@ -96,80 +97,105 @@ export const App: React.FC = () => {
                 title="Menu"
                 aria-label="Apri menu sezioni"
               >
-                {/* 3 righe raffinate e minimali, senza cerchio esterno */}
-                <span className="w-6 h-0.5 bg-current rounded-full transition-all group-hover:w-7" />
-                <span className="w-4 h-0.5 bg-current rounded-full transition-all group-hover:w-7" />
-                <span className="w-5 h-0.5 bg-current rounded-full transition-all group-hover:w-7" />
+                <span className="w-6 h-0.5 bg-current rounded-full transition-all duration-300 group-hover:w-7" />
+                <span className="w-4 h-0.5 bg-current rounded-full transition-all duration-300 group-hover:w-7" />
+                <span className="w-5 h-0.5 bg-current rounded-full transition-all duration-300 group-hover:w-7" />
               </button>
             </div>
           </div>
         </nav>
 
         {/* 
-          Menu Toast Laterale a Scomparsa (con animazione fluida e graduale)
+          Menu Hamburger a Scomparsa Laterale con Motion Naturale & Fluido (Framer Motion)
+          Curve cubic-bezier d'alta gamma per eliminare qualsiasi apertura brusca
         */}
-        {isMenuOpen && (
-          <div className="fixed inset-0 z-50 flex justify-end bg-black/35 backdrop-blur-sm transition-opacity duration-500 ease-out">
-            <div className="w-full max-w-sm bg-white h-full shadow-2xl border-l border-champagne flex flex-col p-6 sm:p-8 transition-transform duration-500 ease-out">
-              <div className="flex items-center justify-between pb-6 border-b border-champagne/60 mb-6">
-                <div className="flex items-center gap-2">
-                  <TattooHeart className="w-8 h-8 text-burgundy" />
-                  <span className="font-serif text-lg text-burgundy font-normal">
-                    Michele &amp; Miriana
-                  </span>
-                </div>
-                <button
-                  type="button"
-                  onClick={() => setIsMenuOpen(false)}
-                  className="p-2 text-[#1a1a1a] hover:text-burgundy transition-colors"
-                  aria-label="Chiudi menu"
-                >
-                  <X className="w-5 h-5" />
-                </button>
-              </div>
+        <AnimatePresence>
+          {isMenuOpen && (
+            <div className="fixed inset-0 z-50 flex justify-end">
+              {/* Backdrop con dissolvenza morbida */}
+              <motion.div
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                exit={{ opacity: 0 }}
+                transition={{ duration: 0.5, ease: [0.16, 1, 0.3, 1] }}
+                onClick={() => setIsMenuOpen(false)}
+                className="fixed inset-0 bg-black/40 backdrop-blur-sm"
+              />
 
-              <div className="flex-1 space-y-2 overflow-y-auto">
-                <p className="text-[10px] uppercase tracking-[0.25em] text-sage font-medium font-sans px-3 mb-2">
-                  Sezioni della Partecipazione
-                </p>
-                {navLinks.map((link) => {
-                  const Icon = link.icon;
-                  return (
-                    <a
-                      key={link.href}
-                      href={link.href}
-                      onClick={() => setIsMenuOpen(false)}
-                      className={`flex items-center gap-3 px-3.5 py-3 rounded-xl transition-all font-sans text-xs uppercase tracking-wider font-medium ${
-                        link.highlight
-                          ? 'bg-burgundy text-white shadow-md'
-                          : 'text-[#1a1a1a] hover:bg-paper-subtle hover:text-burgundy'
-                      }`}
-                    >
-                      <Icon className={`w-4 h-4 shrink-0 ${link.highlight ? 'text-white' : 'text-sage'}`} />
-                      <span>{link.label}</span>
-                    </a>
-                  );
-                })}
-
-                <div className="pt-4 border-t border-champagne/60 mt-6 space-y-2">
+              {/* Drawer laterale con scivolamento e smorzamento naturale (spring / smooth ease) */}
+              <motion.div
+                initial={{ x: '100%', opacity: 0.6 }}
+                animate={{ x: 0, opacity: 1 }}
+                exit={{ x: '100%', opacity: 0 }}
+                transition={{
+                  duration: 0.55,
+                  ease: [0.16, 1, 0.3, 1], // Cubic-bezier naturale
+                }}
+                className="relative z-10 w-full max-w-sm bg-white h-full shadow-2xl border-l border-champagne flex flex-col p-6 sm:p-8 overflow-y-auto"
+              >
+                <div className="flex items-center justify-between pb-6 border-b border-champagne/60 mb-6">
+                  <div className="flex items-center gap-2">
+                    <TattooHeart className="w-8 h-8 text-burgundy" />
+                    <span className="font-script text-3xl text-burgundy font-normal leading-none">
+                      Michele &amp; Miriana
+                    </span>
+                  </div>
                   <button
                     type="button"
-                    onClick={handleReopenInvitation}
-                    className="w-full text-left flex items-center gap-3 px-3.5 py-2.5 rounded-xl text-xs uppercase tracking-wider text-[#444444] hover:text-burgundy hover:bg-paper-subtle font-sans font-medium"
+                    onClick={() => setIsMenuOpen(false)}
+                    className="p-2 text-[#1a1a1a] hover:text-burgundy transition-colors"
+                    aria-label="Chiudi menu"
                   >
-                    <span>Riapri l'Invito Iniziale</span>
+                    <X className="w-5 h-5" />
                   </button>
                 </div>
-              </div>
 
-              <div className="pt-6 border-t border-champagne/60 text-center">
-                <p className="text-xs font-serif italic text-[#555555]">
-                  2 Luglio 2027 • Tenuta Tana di Volpe
-                </p>
-              </div>
+                <div className="flex-1 space-y-2">
+                  <p className="text-[10px] uppercase tracking-[0.25em] text-sage font-medium font-sans px-3 mb-3">
+                    Sezioni della Partecipazione
+                  </p>
+                  {navLinks.map((link, idx) => {
+                    const Icon = link.icon;
+                    return (
+                      <motion.a
+                        key={link.href}
+                        href={link.href}
+                        onClick={() => setIsMenuOpen(false)}
+                        initial={{ opacity: 0, x: 20 }}
+                        animate={{ opacity: 1, x: 0 }}
+                        transition={{ delay: 0.1 + idx * 0.05, duration: 0.4 }}
+                        className={`flex items-center gap-3 px-3.5 py-3 rounded-xl transition-all font-sans text-xs uppercase tracking-wider font-medium ${
+                          link.highlight
+                            ? 'bg-burgundy text-white shadow-md'
+                            : 'text-[#1a1a1a] hover:bg-paper-subtle hover:text-burgundy'
+                        }`}
+                      >
+                        <Icon className={`w-4 h-4 shrink-0 ${link.highlight ? 'text-white' : 'text-sage'}`} />
+                        <span>{link.label}</span>
+                      </motion.a>
+                    );
+                  })}
+
+                  <div className="pt-4 border-t border-champagne/60 mt-6 space-y-2">
+                    <button
+                      type="button"
+                      onClick={handleReopenInvitation}
+                      className="w-full text-left flex items-center gap-3 px-3.5 py-2.5 rounded-xl text-xs uppercase tracking-wider text-[#444444] hover:text-burgundy hover:bg-paper-subtle font-sans font-medium"
+                    >
+                      <span>Riapri l'Invito Iniziale</span>
+                    </button>
+                  </div>
+                </div>
+
+                <div className="pt-6 border-t border-champagne/60 text-center">
+                  <p className="text-xs font-serif italic text-[#555555]">
+                    2 Luglio 2027 • Tenuta Tana di Volpe
+                  </p>
+                </div>
+              </motion.div>
             </div>
-          </div>
-        )}
+          )}
+        </AnimatePresence>
 
         {/* Contenuto Principale con Flusso Riorganizzato */}
         <main className="flex-1 bg-white">
