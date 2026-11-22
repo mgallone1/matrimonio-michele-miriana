@@ -4,12 +4,12 @@ export const Hero: React.FC = () => {
   return (
     <header className="relative pt-44 sm:pt-48 md:pt-52 pb-8 sm:pb-12 px-4 text-center overflow-hidden flex flex-col items-center justify-center bg-white">
       {/* 
-        Ghirlanda Floreale Botanica di Dalie e Fogliame generosa e scenografica:
-        - Dimensione visibile e prominente: w-[320px] sm:w-[420px] md:w-[540px]
-        - Posizionata a filo superiore destro, con rami e foglie che si allungano verso sinistra
-        - Nessun taglio geometrico (contorni naturali sfumati su bianco)
+        Ghirlanda Floreale Botanica di Dalie e Fogliame zoomata e presente:
+        - Dimensioni ingrandite per dare massimo risalto ai fiori: w-[345px] sm:w-[460px] md:w-[560px] lg:w-[640px]
+        - Posizionata a filo superiore destro in modo che l'estremità finale delle foglie a sinistra finisca esattamente dove inizia la 'P' di Partecipazione
+        - 100% contorni naturali intatti (nessun taglio geometrico, nessun ritaglio sui bordi)
       */}
-      <div className="absolute top-0 right-0 w-[320px] sm:w-[420px] md:w-[540px] pointer-events-none select-none z-0">
+      <div className="absolute top-0 right-0 w-[345px] sm:w-[460px] md:w-[560px] lg:w-[640px] pointer-events-none select-none z-0">
         <img
           src="./images/corner_floreale_top_right.png"
           alt="Angolo floreale di dalie ad acquerello esteso a sinistra"
