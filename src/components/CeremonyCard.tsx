@@ -6,21 +6,19 @@ export const CeremonyCard: React.FC = () => {
     <section id="cerimonia" className="pt-2 pb-10 sm:pb-14 px-4 max-w-4xl mx-auto scroll-mt-6 bg-white">
       {/* 
         Acquerello autentico della Cappella storica con bouganville 
-        Mostrato liberamente come dipinto senza riquadri card né bordi
+        Sfumato con effetto delicato ai bordi senza stacchi netti o riquadri
       */}
-      <div className="mb-8 max-w-2xl mx-auto text-center">
-        <div className="relative overflow-hidden aspect-[4/3] sm:aspect-[16/10] rounded-2xl">
+      <div className="mb-6 max-w-2xl mx-auto text-center px-2">
+        <div className="relative inline-block w-full">
           <img
-            src="./images/cappella_acquerello.jpg"
+            src="./images/cappella_acquerello_sfumato.png"
             alt="Tenuta Tana di Volpe dipinta ad acquerello"
-            className="w-full h-full object-cover object-center filter contrast-[1.03]"
+            className="w-full h-auto max-h-[380px] object-contain mx-auto filter contrast-[1.03]"
             loading="lazy"
           />
-          <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent flex items-end justify-center p-4 sm:p-5">
-            <p className="text-white text-xs sm:text-sm font-sans tracking-widest uppercase font-medium drop-shadow-md">
-              Tenuta Tana di Volpe
-            </p>
-          </div>
+          <p className="font-serif italic text-sm sm:text-base text-[#444444] mt-2 font-normal tracking-wide">
+            Tenuta Tana di Volpe
+          </p>
         </div>
       </div>
 
