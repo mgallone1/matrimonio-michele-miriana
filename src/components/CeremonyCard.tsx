@@ -34,7 +34,7 @@ export const CeremonyCard: React.FC = () => {
           </h2>
 
           <p className="font-serif italic text-[#333333] text-base sm:text-lg mb-6 font-light">
-            Saremo felici di accogliervi per celebrare insieme il momento del sì e proseguire con i festeggiamenti tra i giardini in fiore e il verde delle colline cilentane.
+            Saremo felici di accogliervi per celebrare insieme il momento del sì e proseguire con i festeggiamenti tra i giardini in fiore e il verde della tenuta.
           </p>
 
           {/* Griglia Informazioni a contrasto chiaro */}
