@@ -40,15 +40,15 @@ export const CeremonyCard: React.FC = () => {
           </div>
 
           {/* 
-            Dalia chiara ad acquerello con foglioline posizionata a cavallo della linea divisoria,
-            tagliata a filo con il bordo destro dello schermo (bleed edge), senza aggiungere spazio verticale
+            Dalia chiara ad acquerello discreta ed elegante a cavallo della linea divisoria,
+            tagliata a filo con il bordo destro dello schermo (bleed edge), senza ingombro verticale
           */}
           <div className="relative w-full">
-            <div className="absolute right-0 -top-10 sm:-top-14 translate-x-1/4 sm:translate-x-1/6 pointer-events-none select-none z-10 overflow-visible">
+            <div className="absolute right-0 -top-6 sm:-top-8 translate-x-1/4 sm:translate-x-1/6 pointer-events-none select-none z-10 overflow-visible">
               <img
                 src="./images/dalia_cerimonia_destra.png"
                 alt="Dalia chiara ad acquerello con foglioline"
-                className="w-24 sm:w-32 md:w-36 h-auto object-contain opacity-90 drop-shadow-sm"
+                className="w-12 sm:w-16 md:w-20 h-auto object-contain opacity-90"
                 loading="lazy"
               />
             </div>
