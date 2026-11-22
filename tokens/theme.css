@@ -4,30 +4,30 @@
  */
 
 :root {
-  /* Palette Ufficiale Michele & Miriana */
-  --color-espresso: #523c2f;
-  --color-espresso-rgb: 82, 60, 47;
-  --color-champagne: #dacdbd;
-  --color-champagne-rgb: 218, 205, 189;
-  --color-blush: #bf9d9b;
-  --color-blush-rgb: 191, 157, 155;
-  --color-sage: #4f523f;
-  --color-sage-rgb: 79, 82, 63;
-  --color-burgundy: #530c1e;
-  --color-burgundy-rgb: 83, 12, 30;
+  /* Palette Ufficiale Michele & Miriana - Bouquet Miriana */
+  --color-espresso: #423832;
+  --color-espresso-rgb: 66, 56, 50;
+  --color-champagne: #e5dcd0;
+  --color-champagne-rgb: 229, 220, 208;
+  --color-blush: #eec2ad;
+  --color-blush-rgb: 238, 194, 173;
+  --color-sage: #626a3a;
+  --color-sage-rgb: 98, 106, 58;
+  --color-burgundy: #4a0d1b;
+  --color-burgundy-rgb: 74, 13, 27;
 
-  /* Carta & Texture Cotone Organico */
-  --bg-paper: #FAF7F2;
+  /* Carta & Texture Cotone Organico Luminoso */
+  --bg-paper: #FFFFFF;
   --bg-card: #FFFFFF;
-  --bg-card-subtle: #F6F1EA;
-  --border-delicate: rgba(82, 60, 47, 0.15);
-  --border-gold: rgba(218, 205, 189, 0.6);
+  --bg-card-subtle: #FAF6F1;
+  --border-delicate: rgba(66, 56, 50, 0.10);
+  --border-gold: rgba(229, 220, 208, 0.7);
 
   /* Contrasti Accessibilità WCAG 2.2 AA */
-  --text-main: #342720;
-  --text-muted: #6e5c53;
-  --text-burgundy: #530c1e;
-  --text-sage: #404432;
+  --text-main: #2d2622;
+  --text-muted: #6b5e56;
+  --text-burgundy: #4a0d1b;
+  --text-sage: #525a30;
 
   /* Tipografia Editoriale */
   --font-serif: 'Cormorant Garamond', 'Playfair Display', Georgia, serif;

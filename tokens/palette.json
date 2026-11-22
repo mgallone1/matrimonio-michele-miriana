@@ -1,48 +1,39 @@
 {
-  "name": "Michele & Miriana Wedding Palette",
-  "source": "assets/palette/palette_matrimonio.jpg",
-  "extractedAt": "2026-11-14",
+  "name": "Michele & Miriana Wedding Palette - Bouquet Miriana",
+  "source": "Bouquet Dalie, Calle & Orchidee",
+  "extractedAt": "2026-11-22",
+  "philosophy": "Colori chiari e luminosi dominanti (blush cipria, crema calla, verde steli fresco) con tocchi calibrati di bordeaux scuro",
   "colors": {
     "espresso": {
-      "name": "Corteccia / Espresso Antico",
-      "hex": "#523c2f",
-      "rgb": [82, 60, 47],
-      "hsl": [22, 27, 25],
-      "usage": "Testi primari, tipografia serif di testa, contorni botanici d'accento ad alto contrasto"
+      "name": "Corteccia Neutra",
+      "hex": "#423832",
+      "usage": "Testi nitidi e leggibili"
     },
     "champagne": {
-      "name": "Seta Champagne / Carta d'Amalfi",
-      "hex": "#dacdbd",
-      "rgb": [218, 205, 189],
-      "hsl": [33, 29, 80],
+      "name": "Avorio Calla / Seta Champagne",
+      "hex": "#e5dcd0",
       "usage": "Sfondi caldi cotone/lino, card nobilitate, sfumature acquerello neutre"
     },
     "blush": {
-      "name": "Rosa Cipria / Dalia Blush",
-      "hex": "#bf9d9b",
-      "rgb": [191, 157, 155],
-      "hsl": [3, 22, 68],
-      "usage": "Accenti floreali, badge delicati, bagliori e hover delicati, bottoni secondari"
+      "name": "Rosa Cipria Luminoso / Dalia Blush",
+      "hex": "#eec2ad",
+      "usage": "Accenti floreali principali, badge delicati, bagliori, bottoni secondari"
     },
     "sage": {
-      "name": "Verde Salvia Nobile / Foglia d'Ulivo Tana di Volpe",
-      "hex": "#4f523f",
-      "rgb": [79, 82, 63],
-      "hsl": [69, 13, 28],
-      "usage": "Elementi botanici, sezioni natura/tenuta, callout, dettagli foglie dalia"
+      "name": "Verde Botanico Fresco / Steli",
+      "hex": "#626a3a",
+      "usage": "Elementi botanici, dettagli natura, titoletti eleganti"
     },
     "burgundy": {
-      "name": "Bordeaux Sovrano / Velluto Dalia Scarlatta",
-      "hex": "#530c1e",
-      "rgb": [83, 12, 30],
-      "hsl": [345, 75, 19],
-      "usage": "Call-to-Action primari (Conferma RSVP), monogramma M&M, date in evidenza"
+      "name": "Bordeaux Vellutato / Tocco Scuro Calibrato",
+      "hex": "#4a0d1b",
+      "usage": "Solo tocchi speciali: monogramma M&M, pulsante RSVP, dettagli scuri dosati"
     }
   },
   "neutrals": {
-    "paper": "#FAF7F2",
-    "paper-tint": "#F5EFE6",
+    "paper": "#FFFFFF",
+    "paper-tint": "#FAF7F2",
     "paper-edge": "#E8DEC8",
-    "dark-contrast": "#281D17"
+    "dark-contrast": "#210A0D"
   }
 }

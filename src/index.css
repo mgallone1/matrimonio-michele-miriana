@@ -21,8 +21,8 @@
 /* Card bianche pure con bordi nobilitati della palette */
 .white-card {
   background-color: #FFFFFF;
-  border: 1px solid rgba(218, 205, 189, 0.7);
-  box-shadow: 0 10px 30px -4px rgba(82, 60, 47, 0.04);
+  border: 1px solid rgba(229, 220, 208, 0.85);
+  box-shadow: 0 10px 30px -4px rgba(66, 56, 50, 0.04);
 }
 
 .white-card-hover {
@@ -30,9 +30,9 @@
 }
 
 .white-card-hover:hover {
-  border-color: #bf9d9b;
+  border-color: #eec2ad;
   transform: translateY(-2px);
-  box-shadow: 0 14px 34px -4px rgba(82, 60, 47, 0.08);
+  box-shadow: 0 14px 34px -4px rgba(66, 56, 50, 0.08);
 }
 
 /* Pulsanti con i colori autentici della palette di Miriana */
@@ -42,7 +42,7 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  background-color: #530c1e; /* Bordeaux */
+  background-color: #4a0d1b; /* Bordeaux tocco vellutato */
   color: #FFFFFF;
   font-family: "Montserrat", sans-serif;
   font-weight: 500;
@@ -52,13 +52,13 @@
   border-radius: 9999px;
   padding: 0.875rem 2rem;
   transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
-  box-shadow: 0 4px 18px rgba(83, 12, 30, 0.25);
+  box-shadow: 0 4px 18px rgba(74, 13, 27, 0.25);
 }
 
 .btn-primary:hover {
-  background-color: #6e1229;
+  background-color: #631224;
   transform: translateY(-1.5px);
-  box-shadow: 0 6px 22px rgba(83, 12, 30, 0.32);
+  box-shadow: 0 6px 22px rgba(74, 13, 27, 0.32);
 }
 
 .btn-primary:active {
@@ -72,8 +72,8 @@
   align-items: center;
   justify-content: center;
   background-color: #FFFFFF;
-  color: #4f523f; /* Verde Salvia */
-  border: 1px solid #4f523f;
+  color: #626a3a; /* Verde Botanico Fresco */
+  border: 1px solid #626a3a;
   font-family: "Montserrat", sans-serif;
   font-weight: 500;
   font-size: 0.8125rem;
@@ -85,9 +85,9 @@
 }
 
 .btn-secondary:hover {
-  background-color: rgba(79, 82, 63, 0.06);
-  color: #383a2c;
-  border-color: #383a2c;
+  background-color: rgba(98, 106, 58, 0.08);
+  color: #4c532c;
+  border-color: #4c532c;
 }
 
 /* Divisore Floreale con Dalia Blush e linee Champagne */

@@ -8,35 +8,35 @@ export default {
     extend: {
       colors: {
         espresso: {
-          DEFAULT: '#523c2f',
-          light: '#6d513f',
-          dark: '#38271e',
+          DEFAULT: '#423832',
+          light: '#5d4f47',
+          dark: '#28221e',
         },
         champagne: {
-          DEFAULT: '#dacdbd',
-          light: '#f7f4ef',
-          dark: '#c4b39f',
+          DEFAULT: '#e5dcd0',
+          light: '#fbf9f6',
+          dark: '#cfc2b1',
         },
         blush: {
-          DEFAULT: '#bf9d9b',
-          light: '#f5eeec',
-          dark: '#9a7573',
+          DEFAULT: '#eec2ad',
+          light: '#faede7',
+          dark: '#dca68e',
         },
         sage: {
-          DEFAULT: '#4f523f',
-          light: '#eff2e7',
-          dark: '#383a2c',
+          DEFAULT: '#626a3a',
+          light: '#f2f5e8',
+          dark: '#4c532c',
         },
         burgundy: {
-          DEFAULT: '#530c1e',
-          light: '#72122b',
-          dark: '#380612',
+          DEFAULT: '#4a0d1b',
+          light: '#6b1427',
+          dark: '#300811',
         },
         paper: {
-          DEFAULT: '#FDFAF6',
+          DEFAULT: '#FFFFFF',
           card: '#FFFFFF',
-          subtle: '#F9F5EF',
-          border: 'rgba(218, 205, 189, 0.4)'
+          subtle: '#FAF6F1',
+          border: 'rgba(229, 220, 208, 0.6)'
         }
       },
       fontFamily: {
