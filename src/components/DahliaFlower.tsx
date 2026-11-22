@@ -12,7 +12,7 @@ export const DahliaFlower: React.FC<DahliaFlowerProps> = ({
   paletteVariant = 'full',
 }) => {
   // Colori autentici estratti dal bouquet di Miriana (incluso il rosa ciclamino/orchidea vivo)
-  const strokeBurgundy = '#3c1323';
+  const strokeBurgundy = '#5a0a1c';
   const strokeChampagne = '#e5dcd0';
   const strokeSage = '#626a3a';
   const strokeRose = '#e5517c'; // Rosa ciclamino / Dalia viva
@@ -36,7 +36,7 @@ export const DahliaFlower: React.FC<DahliaFlowerProps> = ({
         </radialGradient>
         <radialGradient id="petalBurgundy" cx="50%" cy="30%" r="70%">
           <stop offset="0%" stopColor="#923649" stopOpacity="0.65" />
-          <stop offset="100%" stopColor="#3c1323" stopOpacity="0.9" />
+          <stop offset="100%" stopColor="#5a0a1c" stopOpacity="0.9" />
         </radialGradient>
         <radialGradient id="petalRose" cx="50%" cy="40%" r="60%">
           <stop offset="0%" stopColor="#fde8ef" stopOpacity="0.9" />
@@ -92,7 +92,7 @@ export const DahliaFlower: React.FC<DahliaFlowerProps> = ({
 
         {/* Bocciolo centrale in rosa blush & bordeaux */}
         <circle cx="0" cy="0" r="9" fill="#eec2ad" stroke="#e5517c" strokeWidth="1" />
-        <circle cx="0" cy="0" r="4.5" fill="#3c1323" />
+        <circle cx="0" cy="0" r="4.5" fill="#5a0a1c" />
       </g>
     </svg>
   );

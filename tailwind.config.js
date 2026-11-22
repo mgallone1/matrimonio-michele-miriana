@@ -34,9 +34,9 @@ export default {
           dark: '#4c532c',
         },
         burgundy: {
-          DEFAULT: '#3c1323', // Campionato dalla dalia scura in alto a sinistra
-          light: '#561f25',
-          dark: '#290000',
+          DEFAULT: '#5a0a1c', // Opzione 3: Rosso dalia vellutato più caldo e luminoso
+          light: '#78152c',
+          dark: '#3c0612',
         },
         paper: {
           DEFAULT: '#FFFFFF',

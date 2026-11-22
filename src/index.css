@@ -42,7 +42,7 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  background-color: #3c1323; /* Dalia scura campionata dal fregio */
+  background-color: #5a0a1c; /* Dalia vellutata calda e visibile */
   color: #FFFFFF;
   font-family: "Montserrat", sans-serif;
   font-weight: 500;
@@ -52,11 +52,11 @@
   border-radius: 9999px;
   padding: 0.875rem 2rem;
   transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
-  box-shadow: 0 4px 18px rgba(60, 19, 35, 0.25);
+  box-shadow: 0 4px 18px rgba(90, 10, 28, 0.25);
 }
 
 .btn-primary:hover {
-  background-color: #561f25;
+  background-color: #78152c;
   transform: translateY(-1.5px);
   box-shadow: 0 6px 22px rgba(74, 13, 27, 0.32);
 }
