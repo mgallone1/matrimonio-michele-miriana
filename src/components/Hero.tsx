@@ -2,16 +2,16 @@ import React from 'react';
 
 export const Hero: React.FC = () => {
   return (
-    <header className="relative pt-0 pb-6 sm:pb-8 px-4 text-center overflow-hidden flex flex-col items-center justify-center bg-white">
+    <header className="relative pt-6 sm:pt-8 pb-6 sm:pb-8 px-4 text-center overflow-hidden flex flex-col items-center justify-center bg-white">
       {/* 
-        Fregio / Banner floreale dritto edge-to-edge a tutta larghezza in cima:
-        Con sfumatura morbida ai bordi (stile acquerello cappella) per fondersi dolcemente con lo sfondo bianco
+        Angolo Floreale Botanico (Proposta A a Destra con sfumatura organica):
+        Collocato nell'angolo superiore destro senza tagli squadrati, non copre le scritte
       */}
-      <div className="w-full max-w-5xl mx-auto -mt-2 sm:-mt-4 mb-1 pointer-events-none select-none z-10 px-0 sm:px-2">
+      <div className="absolute top-0 right-0 w-[240px] sm:w-[320px] md:w-[400px] pointer-events-none select-none z-0">
         <img
-          src="./images/fregio_dalie_top_sfumato.png"
-          alt="Bordo floreale di dalie sfumato ad acquerello"
-          className="w-full h-auto object-cover max-h-[160px] sm:max-h-[220px] object-top filter contrast-[1.02] opacity-95"
+          src="./images/corner_floreale_top_right.png"
+          alt="Angolo floreale di dalie ad acquerello"
+          className="w-full h-auto object-contain filter contrast-[1.02] opacity-95"
           loading="eager"
         />
       </div>
