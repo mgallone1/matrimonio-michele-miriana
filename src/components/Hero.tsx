@@ -2,32 +2,7 @@ import React from 'react';
 
 export const Hero: React.FC = () => {
   return (
-    <header className="relative pt-10 sm:pt-16 pb-6 sm:pb-8 px-4 text-center overflow-hidden flex items-center justify-center bg-white">
-      {/* 
-        Dalie acquerellate in alto negli angoli con i due colori autentici della tavola:
-        - Sinistra: Dalia CHIARA (Rosa Blush / Cipria cipria vellutato con sfumature crema e salvia)
-        - Destra: Dalia SCURA (Bordeaux profondo / Dark Wine vellutato)
-      */}
-      {/* Angolo Sinistro: Dalia Chiara (Blush Pink) orientata verso destra */}
-      <div className="absolute top-0 left-0 sm:top-2 sm:left-2 w-28 sm:w-44 md:w-56 pointer-events-none select-none z-0 opacity-85 rotate-3 transform -translate-x-4 -translate-y-4 sm:-translate-x-2 sm:translate-y-0">
-        <img
-          src="./images/dalia_chiara_blush_destra.png"
-          alt="Dalia botanica acquerellata chiara rosa blush rivolta a destra"
-          className="w-full h-auto object-contain filter drop-shadow-sm"
-          loading="eager"
-        />
-      </div>
-
-      {/* Angolo Destro: Dalia Scura (Bordeaux / Dark Wine) */}
-      <div className="absolute top-0 right-0 sm:top-2 sm:right-2 w-28 sm:w-44 md:w-56 pointer-events-none select-none z-0 opacity-85 rotate-6 transform translate-x-4 -translate-y-4 sm:translate-x-2 sm:translate-y-0">
-        <img
-          src="./images/dalia_scura_burgundy.png"
-          alt="Dalia botanica acquerellata scura bordeaux"
-          className="w-full h-auto object-contain filter drop-shadow-sm"
-          loading="eager"
-        />
-      </div>
-
+    <header className="relative pt-8 sm:pt-12 pb-6 sm:pb-8 px-4 text-center overflow-hidden flex items-center justify-center bg-white">
       {/* 
         Acquerello della Tenuta come SFONDO TENUE su BIANCO PURO (#FFFFFF):
         Opacità calibrata al 20%, luminoso, fresco e discreto.
@@ -45,12 +20,25 @@ export const Hero: React.FC = () => {
       </div>
 
       <div className="max-w-3xl mx-auto relative z-10 w-full">
-        {/* Sovratitolo in Verde Salvia Nobile (#4f523f) */}
-        <p className="font-sans text-xs uppercase tracking-[0.35em] text-sage font-medium mb-3">
+        {/* Sovratitolo in Verde Salvia Nobile (#626a3a) */}
+        <p className="font-sans text-xs uppercase tracking-[0.35em] text-sage font-medium mb-1">
           Partecipazione di Nozze
         </p>
 
-        {/* NOMI CENTRALI GRANDI con Great Vibes in Bordeaux nobile (#530c1e) */}
+        {/* 
+          Cornice / Arco di sole corolle di Dalie (senza steli né gambi):
+          Disposta subito sopra i nomi di Michele & Miriana con grazia ed equilibrio
+        */}
+        <div className="max-w-xs sm:max-w-sm md:max-w-md mx-auto my-1 pointer-events-none select-none">
+          <img
+            src="./images/cornice_dalie_nomi.png"
+            alt="Cornice di dalie fiorite"
+            className="w-full h-auto object-contain filter drop-shadow-sm opacity-95"
+            loading="eager"
+          />
+        </div>
+
+        {/* NOMI CENTRALI GRANDI con Great Vibes in Bordeaux nobile (#4a0d1b) */}
         <h1 className="font-script text-5xl sm:text-7xl md:text-8xl text-burgundy font-normal leading-tight mb-4 select-none drop-shadow-sm">
           Michele &amp; Miriana
         </h1>

@@ -102,10 +102,9 @@ export const LocationSection: React.FC = () => {
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-stretch">
         <div className="p-8 sm:p-10 rounded-3xl white-card flex flex-col justify-between">
           <div>
-            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-champagne-light border border-champagne text-xs font-sans text-burgundy font-medium mb-4">
-              <MapPin className="w-3.5 h-3.5 text-burgundy" />
-              <span>Indirizzo Ufficiale Ricevimento</span>
-            </div>
+            <p className="font-sans text-xs uppercase tracking-[0.25em] text-burgundy font-medium mb-3">
+              Indirizzo Ufficiale Ricevimento
+            </p>
 
             <h4 className="font-serif text-2xl font-normal text-[#1a1a1a] mb-2">
               Tenuta Tana di Volpe
