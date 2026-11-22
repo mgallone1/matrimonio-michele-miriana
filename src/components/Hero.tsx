@@ -4,15 +4,15 @@ export const Hero: React.FC = () => {
   return (
     <header className="relative pt-44 sm:pt-48 md:pt-52 pb-8 sm:pb-12 px-4 text-center overflow-hidden flex flex-col items-center justify-center bg-white">
       {/* 
-        Ghirlanda Floreale Botanica di Dalie e Fogliame zoomata e presente:
-        - Dimensioni ingrandite per dare massimo risalto ai fiori: w-[345px] sm:w-[460px] md:w-[560px] lg:w-[640px]
-        - Posizionata a filo superiore destro in modo che l'estremità finale delle foglie a sinistra finisca esattamente dove inizia la 'P' di Partecipazione
-        - 100% contorni naturali intatti (nessun taglio geometrico, nessun ritaglio sui bordi)
+        Ghirlanda Floreale Botanica di Dalie e Fogliame zoomata dall'angolo:
+        - I fiori principali partono direttamente dall'angolo superiore destro (tagliati a filo in alto e a destra per dare massimo zoom e presenza scultorea)
+        - Il ramo di foglie a sinistra si estende organicamente finendo poco oltre la 'P' di Partecipazione
+        - Dimensioni calibrate: w-[355px] sm:w-[480px] md:w-[600px] lg:w-[700px]
       */}
-      <div className="absolute top-0 right-0 w-[345px] sm:w-[460px] md:w-[560px] lg:w-[640px] pointer-events-none select-none z-0">
+      <div className="absolute top-0 right-0 w-[355px] sm:w-[480px] md:w-[600px] lg:w-[700px] pointer-events-none select-none z-0">
         <img
           src="./images/corner_floreale_top_right.png"
-          alt="Angolo floreale di dalie ad acquerello esteso a sinistra"
+          alt="Angolo floreale di dalie ad acquerello esteso dall'angolo"
           className="w-full h-auto object-contain filter contrast-[1.02] opacity-95"
           loading="eager"
         />
