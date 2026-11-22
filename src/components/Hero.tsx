@@ -38,9 +38,20 @@ export const Hero: React.FC = () => {
           Partecipazione di Nozze
         </p>
 
-        {/* NOMI CENTRALI GRANDI con Alex Brush in Bordeaux nobile (#4a0d1b) e tratto sottile ed elegante */}
-        <h1 className="font-script text-6xl sm:text-8xl md:text-9xl text-burgundy font-normal leading-tight mb-4 select-none drop-shadow-sm tracking-wide">
-          Michele &amp; Miriana
+        {/* 
+          NOMI DISPOSTI IN SCALETTATURA DINAMICA / AUREA:
+          Michele a sinistra, & al centro, Miriana a destra
+        */}
+        <h1 className="font-script text-burgundy font-normal select-none drop-shadow-sm mb-4 tracking-wide max-w-xl mx-auto">
+          <span className="block text-left pl-2 sm:pl-6 text-6xl sm:text-7xl md:text-8xl leading-none">
+            Michele
+          </span>
+          <span className="block text-center text-4xl sm:text-5xl md:text-6xl text-burgundy/80 -my-1 sm:-my-2 font-serif italic">
+            &amp;
+          </span>
+          <span className="block text-right pr-2 sm:pr-6 text-6xl sm:text-7xl md:text-8xl leading-none">
+            Miriana
+          </span>
         </h1>
 
         {/* Frase romantica direttamente sotto i nomi, senza elementi intermedi */}
