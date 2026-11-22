@@ -1,0 +1,18 @@
+{
+  "name": "Matrimonio Michele & Miriana",
+  "short_name": "Michele & Miriana",
+  "description": "Partecipazione di nozze di Michele & Miriana — 2 Luglio 2027 a Tenuta Tana di Volpe, Albanella",
+  "start_url": "/?preview=site",
+  "display": "standalone",
+  "background_color": "#FAF7F2",
+  "theme_color": "#530c1e",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "/icons/dahlia.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}
