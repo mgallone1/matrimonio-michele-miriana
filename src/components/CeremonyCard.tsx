@@ -33,24 +33,29 @@ export const CeremonyCard: React.FC = () => {
             La Nostra Giornata
           </h2>
 
-          <div className="relative mb-8 max-w-xl mx-auto">
+          <div className="mb-6 max-w-xl mx-auto">
             <p className="font-serif italic text-[#333333] text-base sm:text-lg font-light leading-relaxed">
               Saremo felici di accogliervi per celebrare insieme il momento del sì e proseguire con i festeggiamenti tra i giardini in fiore e il verde della tenuta.
             </p>
+          </div>
 
-            {/* Dalia chiara ad acquerello nell'angolo in basso a destra sotto la frase */}
-            <div className="flex justify-end -mt-2 sm:-mt-4 mr-0 pointer-events-none select-none">
+          {/* 
+            Dalia chiara ad acquerello con foglioline posizionata a cavallo della linea divisoria,
+            tagliata a filo con il bordo destro dello schermo (bleed edge), senza aggiungere spazio verticale
+          */}
+          <div className="relative w-full">
+            <div className="absolute right-0 -top-10 sm:-top-14 translate-x-1/4 sm:translate-x-1/6 pointer-events-none select-none z-10 overflow-visible">
               <img
-                src="./images/dalia_chiara_invito.png"
-                alt="Dalia chiara ad acquerello"
-                className="w-16 h-16 sm:w-20 sm:h-20 object-contain opacity-85 hover:opacity-100 transition-opacity"
+                src="./images/dalia_cerimonia_destra.png"
+                alt="Dalia chiara ad acquerello con foglioline"
+                className="w-24 sm:w-32 md:w-36 h-auto object-contain opacity-90 drop-shadow-sm"
                 loading="lazy"
               />
             </div>
           </div>
 
           {/* Griglia Informazioni fluida su fondo aperto */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 py-6 mb-8 text-left border-y border-champagne/40">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 py-6 mb-8 text-left border-y border-champagne/40 relative">
             {/* Orario */}
             <div className="flex items-start gap-4">
               <div className="w-11 h-11 rounded-full bg-champagne/20 flex items-center justify-center shrink-0 text-burgundy mt-0.5">
