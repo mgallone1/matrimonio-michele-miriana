@@ -39,19 +39,32 @@ export const Hero: React.FC = () => {
         </p>
 
         {/* 
-          NOMI DISPOSTI IN SCALETTATURA ELEGANTE E BILANCIATA:
-          Michele leggermente a sinistra, & più grande al centro, Miriana leggermente a destra
+          COMPOSIZIONE ARTISTICA NOMI CON & SCENOGRAFICA SOVRAPPOSTA:
+          Michele in alto a sinistra con la & gigante e più chiara a fianco,
+          che scende verso il basso intersecando con grazia le lettere di Miriana senza coprirle
         */}
-        <h1 className="font-script text-burgundy font-normal select-none drop-shadow-sm mb-4 tracking-wide max-w-md mx-auto">
-          <span className="block text-center -translate-x-6 sm:-translate-x-12 text-6xl sm:text-7xl md:text-8xl leading-none">
-            Michele
-          </span>
-          <span className="block text-center text-5xl sm:text-6xl md:text-7xl text-burgundy/85 -my-2 sm:-my-3 font-serif italic select-none">
-            &amp;
-          </span>
-          <span className="block text-center translate-x-6 sm:translate-x-12 text-6xl sm:text-7xl md:text-8xl leading-none">
-            Miriana
-          </span>
+        <h1 className="font-script select-none drop-shadow-sm mb-4 max-w-lg mx-auto relative text-burgundy font-normal">
+          {/* Prima riga: Michele + Ampersand gigante integrata */}
+          <div className="flex items-baseline justify-center sm:justify-start pl-2 sm:pl-10 relative">
+            <span className="text-6xl sm:text-7xl md:text-8xl leading-none tracking-wide z-10 relative">
+              Michele
+            </span>
+            {/* 
+              Ampersand & gigante: posizionata di fianco a Michele, 
+              scende morbidamente verso il basso, con colore più chiaro (cipria/rosato #dca68e o bordeaux semitrasparente)
+              e opacità calibrata (mix-blend-multiply) per intersecare Miriana con perfetta leggibilità
+            */}
+            <span className="font-serif italic text-7xl sm:text-8xl md:text-9xl text-[#c78d75]/60 absolute left-[56%] sm:left-[52%] top-[-8px] sm:top-[-14px] leading-none pointer-events-none z-0 select-none mix-blend-multiply">
+              &amp;
+            </span>
+          </div>
+
+          {/* Seconda riga: Miriana spostata a destra che interseca la curva inferiore della & */}
+          <div className="flex justify-center sm:justify-end pr-2 sm:pr-8 -mt-2 sm:-mt-4 relative z-10">
+            <span className="text-6xl sm:text-7xl md:text-8xl leading-none tracking-wide">
+              Miriana
+            </span>
+          </div>
         </h1>
 
         {/* Frase romantica direttamente sotto i nomi, senza elementi intermedi */}
