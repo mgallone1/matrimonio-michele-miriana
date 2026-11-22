@@ -179,7 +179,7 @@ export const RsvpForm: React.FC = () => {
         </p>
       </div>
 
-      <div className="p-8 sm:p-12 rounded-3xl white-card">
+      <div className="py-6 sm:py-10 max-w-2xl mx-auto">
         {status === 'success' ? (
           <div className="py-12 text-center">
             <div className="w-16 h-16 rounded-full bg-sage/10 text-sage mx-auto flex items-center justify-center mb-4">

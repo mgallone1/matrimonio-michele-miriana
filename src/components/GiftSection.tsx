@@ -44,7 +44,7 @@ export const GiftSection: React.FC = () => {
         </h2>
       </div>
 
-      <div className="p-8 sm:p-12 rounded-3xl white-card text-center relative overflow-hidden">
+      <div className="py-6 sm:py-10 text-center relative overflow-hidden">
         {/* Accento floreale acquerellato chiaro nell'angolo della lista nozze */}
         <div className="absolute -bottom-8 -left-8 w-28 sm:w-36 pointer-events-none select-none opacity-45">
           <img
@@ -55,13 +55,13 @@ export const GiftSection: React.FC = () => {
           />
         </div>
 
-        <p className="text-[#2c2c2c] text-base sm:text-lg max-w-xl mx-auto leading-relaxed mb-8 font-serif font-light">
+        <p className="text-[#2c2c2c] text-base sm:text-lg max-w-xl mx-auto leading-relaxed mb-8 font-serif font-light italic">
           «Il regalo più bello sarà averti con noi per festeggiare, ridere e ballare. 
           Se desideri accompagnare i nostri primi passi e contribuire al nostro viaggio di nozze, puoi farlo qui:»
         </p>
 
-        {/* Box IBAN su fondo bianco pulito con bordo dorato Champagne */}
-        <div className="p-6 sm:p-8 rounded-2xl border border-champagne max-w-xl mx-auto text-left bg-white shadow-sm">
+        {/* Box IBAN essenziale senza riquadri pesanti */}
+        <div className="py-6 max-w-xl mx-auto text-left border-y border-champagne/50">
           <div className="flex items-center justify-between gap-2 mb-4">
             <span className="text-[11px] uppercase tracking-[0.2em] font-semibold text-[#1a1a1a]/70 font-sans">
               Coordinate Bancarie (IBAN)
@@ -71,8 +71,8 @@ export const GiftSection: React.FC = () => {
             </span>
           </div>
 
-          <div className="p-4 bg-paper-subtle/50 rounded-xl border border-champagne flex flex-col md:flex-row items-center justify-between gap-4 mb-6">
-            <span className="font-mono text-xs sm:text-sm md:text-base font-semibold text-[#1a1a1a] tracking-wider select-all">
+          <div className="py-3 px-2 flex flex-col md:flex-row items-center justify-between gap-4 mb-6">
+            <span className="font-mono text-sm sm:text-base md:text-lg font-semibold text-[#1a1a1a] tracking-wider select-all">
               {cleanIban}
             </span>
             <Magnetic distance={0.2}>
@@ -97,7 +97,7 @@ export const GiftSection: React.FC = () => {
             </Magnetic>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 text-xs font-sans border-t border-champagne/60 pt-4">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 text-xs font-sans border-t border-champagne/40 pt-4">
             <div>
               <span className="block text-[#555555] mb-0.5">Intestatari del conto:</span>
               <strong className="text-[#1a1a1a] font-medium text-sm">{bankData.intestatari}</strong>

@@ -103,17 +103,17 @@ export const Timeline: React.FC = () => {
                     isEven ? 'sm:pl-8 sm:text-left' : 'sm:pr-8 sm:text-right'
                   }`}
                 >
-                  <div className="p-6 rounded-2xl white-card white-card-hover inline-block w-full">
+                  <div className="py-4 px-2 inline-block w-full">
                     <span className="font-serif text-2xl font-normal text-burgundy tracking-wide block mb-1">
                       {step.time}
                     </span>
-                    <h3 className="font-serif text-xl font-normal text-[#1a1a1a] mb-1">
+                    <h3 className="font-serif italic text-2xl font-normal text-[#1a1a1a] mb-1">
                       {step.title}
                     </h3>
                     <p className="text-xs uppercase tracking-wider text-sage font-sans font-medium mb-2">
                       {step.subtitle}
                     </p>
-                    <p className="text-xs text-[#444444] font-sans leading-relaxed">
+                    <p className="text-sm text-[#444444] font-serif leading-relaxed">
                       {step.description}
                     </p>
                   </div>

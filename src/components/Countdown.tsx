@@ -76,7 +76,7 @@ export const Countdown: React.FC = () => {
 
   return (
     <section className="py-14 px-4 max-w-4xl mx-auto text-center" aria-label="Conto alla rovescia al matrimonio">
-      <div className="white-card rounded-3xl p-8 sm:p-12 relative overflow-hidden">
+      <div className="py-6 relative overflow-hidden">
         <p className="font-sans text-xs uppercase tracking-[0.35em] text-sage font-medium mb-3">
           Il Conto alla Rovescia
         </p>
@@ -86,9 +86,9 @@ export const Countdown: React.FC = () => {
         </h3>
 
         {/* 
-          Countdown su UNA SOLA RIGA continua, pulito, elegante e perfettamente calibrato anche per smartphone 
+          Countdown su UNA SOLA RIGA continua, fluido, senza riquadri rigidi
         */}
-        <div className="max-w-xl mx-auto py-5 px-4 sm:px-8 rounded-2xl bg-white border border-champagne shadow-sm mb-10 flex items-center justify-center gap-2 sm:gap-6">
+        <div className="max-w-xl mx-auto py-5 px-4 sm:px-8 mb-8 flex items-center justify-center gap-2 sm:gap-6 border-y border-champagne/40">
           {timeUnits.map((item, idx) => (
             <React.Fragment key={item.label}>
               <div className="flex flex-col items-center">

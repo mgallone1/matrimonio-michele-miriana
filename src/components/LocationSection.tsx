@@ -52,8 +52,8 @@ export const LocationSection: React.FC = () => {
       </div>
 
       {/* Galleria Scenografica con foto e descrizioni autentiche */}
-      <div className="p-4 sm:p-6 mb-10 rounded-3xl white-card">
-        <div className="relative rounded-2xl overflow-hidden aspect-[16/10] sm:aspect-[21/9] mb-4 bg-espresso/5">
+      <div className="mb-12">
+        <div className="relative rounded-3xl overflow-hidden aspect-[16/10] sm:aspect-[21/9] mb-4 bg-espresso/5 shadow-sm">
           <picture className="w-full h-full">
             <source srcSet={photos[activePhoto].webp} type="image/webp" />
             <img
@@ -98,15 +98,15 @@ export const LocationSection: React.FC = () => {
         </div>
       </div>
 
-      {/* Riquadro Dettaglio Luogo con Badge Maps Esatto */}
+      {/* Dettaglio Luogo essenziale e aperto */}
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-stretch">
-        <div className="p-8 sm:p-10 rounded-3xl white-card flex flex-col justify-between">
+        <div className="py-6 sm:py-8 flex flex-col justify-between">
           <div>
             <p className="font-sans text-xs uppercase tracking-[0.25em] text-burgundy font-medium mb-3">
               Indirizzo Ufficiale Ricevimento
             </p>
 
-            <h4 className="font-serif text-2xl font-normal text-[#1a1a1a] mb-2">
+            <h4 className="font-serif italic text-3xl font-normal text-[#1a1a1a] mb-2">
               Tenuta Tana di Volpe
             </h4>
 
@@ -118,7 +118,7 @@ export const LocationSection: React.FC = () => {
               La tenuta è situata nella frazione Matinella di Albanella, facilmente raggiungibile a 15 minuti dagli scavi di Paestum e dalla costa.
             </p>
 
-            <div className="space-y-3 text-xs text-[#555555] font-sans border-t border-champagne pt-5 mb-8">
+            <div className="space-y-3 text-xs text-[#555555] font-sans border-t border-champagne/40 pt-5 mb-8">
               <p>
                 <strong className="text-[#1a1a1a]">Come arrivare:</strong> Dalla SS18 Tirrena Inferiore prendere l'uscita per Matinella / Albanella e proseguire lungo la Via Provinciale fino al numero 19.
               </p>
@@ -154,8 +154,8 @@ export const LocationSection: React.FC = () => {
           </div>
         </div>
 
-        {/* Riquadro Mappa Embed centrato esattamente su Via Provinciale 19, Matinella di Albanella */}
-        <div className="rounded-3xl overflow-hidden border border-champagne shadow-sm bg-white min-h-[320px] relative">
+        {/* Mappa Google Maps integrata con angoli arrotondati morbidi */}
+        <div className="rounded-3xl overflow-hidden bg-white min-h-[320px] relative shadow-sm">
           <iframe
             title="Mappa Posizione Esatta: Via Provinciale 19, Matinella di Albanella"
             src="https://maps.google.com/maps?q=Via%20Provinciale%2C%2019%2C%20Matinella%2C%2084044%20Albanella%20SA&t=&z=16&ie=UTF8&iwloc=&output=embed"

@@ -32,20 +32,20 @@ export const DetailsSection: React.FC = () => {
         </div>
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
         {/* Dress Code & Scarpe */}
-        <div className="paper-card rounded-2xl p-6 sm:p-8">
+        <div className="py-6 sm:py-8">
           <div className="w-12 h-12 rounded-full bg-champagne/30 text-burgundy flex items-center justify-center mb-4">
             <Shirt className="w-6 h-6" />
           </div>
-          <h3 className="font-serif text-xl font-medium text-espresso mb-2">
+          <h3 className="font-serif italic text-2xl font-normal text-espresso mb-2">
             Dress Code: Elegante Estivo
           </h3>
-          <p className="text-espresso/75 text-sm leading-relaxed mb-4">
+          <p className="text-espresso/75 text-sm leading-relaxed mb-4 font-serif">
             Gradito abito scuro o spezzato estivo per i signori e abito lungo o cocktail per le signore. Ispiratevi ai colori caldi della natura e dell’estate cilentana.
           </p>
 
-          <div className="p-3.5 rounded-xl bg-champagne/20 border border-champagne/60 flex items-start gap-3">
+          <div className="py-3.5 border-t border-champagne/40 flex items-start gap-3">
             <Footprints className="w-5 h-5 text-sage shrink-0 mt-0.5" />
             <p className="text-xs text-espresso/80">
               <strong>Nota Calzature:</strong> La cerimonia civile e l’aperitivo si terranno sui prati all’inglese della tenuta. Si consigliano tacchi comodi, blocchi o zeppe (forniremo comunque salva-tacchi all’ingresso!).
@@ -54,20 +54,20 @@ export const DetailsSection: React.FC = () => {
         </div>
 
         {/* Dove Dormire */}
-        <div className="paper-card rounded-2xl p-6 sm:p-8">
+        <div className="py-6 sm:py-8">
           <div className="w-12 h-12 rounded-full bg-champagne/30 text-burgundy flex items-center justify-center mb-4">
             <Hotel className="w-6 h-6" />
           </div>
-          <h3 className="font-serif text-xl font-medium text-espresso mb-2">
+          <h3 className="font-serif italic text-2xl font-normal text-espresso mb-2">
             Alloggi &amp; Pernottamento
           </h3>
-          <p className="text-espresso/75 text-sm leading-relaxed mb-4">
+          <p className="text-espresso/75 text-sm leading-relaxed mb-4 font-serif">
             Per chi desidera fermarsi per il weekend e scoprire il Cilento o i Templi di Paestum, ecco le migliori opzioni di pernottamento:
           </p>
 
           <div className="space-y-2.5">
             {accommodations.map((acc, idx) => (
-              <div key={idx} className="p-3 rounded-xl bg-[#FAF7F2] border border-champagne/60 text-xs">
+              <div key={idx} className="py-2.5 border-b border-champagne/30 text-xs">
                 <div className="flex justify-between items-center mb-0.5">
                   <span className="font-semibold text-espresso">{acc.name}</span>
                   <span className="text-[10px] text-sage font-medium uppercase">{acc.type}</span>
@@ -79,8 +79,8 @@ export const DetailsSection: React.FC = () => {
         </div>
       </div>
 
-      {/* Box Domande & Contatti */}
-      <div className="paper-card rounded-2xl p-6 text-center max-w-xl mx-auto border border-champagne/80">
+      {/* Box Domande & Contatti aperto */}
+      <div className="py-6 text-center max-w-xl mx-auto border-t border-champagne/40">
         <HelpCircle className="w-6 h-6 text-burgundy mx-auto mb-2" />
         <h4 className="font-serif text-lg font-medium text-espresso mb-1">
           Hai domande o esigenze particolari?

@@ -90,14 +90,14 @@ export const FaqSection: React.FC = () => {
             return (
               <div
                 key={faq.id}
-                className="rounded-2xl border border-champagne bg-white shadow-sm overflow-hidden transition-all"
+                className="border-b border-champagne/40 bg-white transition-all"
               >
                 <button
                   type="button"
                   onClick={() => toggleFaq(faq.id)}
-                  className="w-full p-5 sm:p-6 text-left flex items-center justify-between gap-3 text-[#1a1a1a] hover:text-burgundy transition-colors"
+                  className="w-full py-5 text-left flex items-center justify-between gap-3 text-[#1a1a1a] hover:text-burgundy transition-colors"
                 >
-                  <span className="font-serif text-lg sm:text-xl font-normal">
+                  <span className="font-serif italic text-xl font-normal">
                     {faq.question}
                   </span>
                   <ChevronDown
@@ -108,7 +108,7 @@ export const FaqSection: React.FC = () => {
                 </button>
 
                 {isOpen && (
-                  <div className="px-5 pb-6 sm:px-6 text-xs sm:text-sm text-[#333333] font-sans leading-relaxed border-t border-champagne/40 pt-4">
+                  <div className="pb-6 text-sm text-[#333333] font-serif leading-relaxed pt-1">
                     {faq.answer}
                   </div>
                 )}
@@ -117,8 +117,8 @@ export const FaqSection: React.FC = () => {
           })}
         </div>
 
-        <div className="p-7 rounded-3xl white-card space-y-4">
-          <div className="flex items-center gap-2.5 text-[#1a1a1a] font-serif text-xl font-normal pb-3 border-b border-champagne">
+        <div className="py-6 space-y-4 lg:border-l lg:border-champagne/40 lg:pl-8">
+          <div className="flex items-center gap-2.5 text-[#1a1a1a] font-serif italic text-2xl font-normal pb-3 border-b border-champagne/40">
             <Hotel className="w-5 h-5 text-sage" />
             <span>Dove Soggiornare</span>
           </div>
@@ -129,7 +129,7 @@ export const FaqSection: React.FC = () => {
 
           <div className="space-y-3 pt-2">
             {accommodations.map((acc, idx) => (
-              <div key={idx} className="p-3.5 rounded-xl bg-paper-subtle/50 border border-champagne/70 text-xs">
+              <div key={idx} className="py-2.5 border-b border-champagne/30 text-xs">
                 <strong className="block font-medium text-[#1a1a1a] font-serif text-sm">
                   {acc.name}
                 </strong>

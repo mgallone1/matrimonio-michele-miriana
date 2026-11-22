@@ -22,26 +22,26 @@ export const CeremonyCard: React.FC = () => {
         </div>
       </div>
 
-      {/* Blocco Nobilitato Unico: Data, Orario, Luogo e Tipologia Rito */}
-      <div className="relative rounded-3xl bg-white border border-champagne p-6 sm:p-10 shadow-sm text-center overflow-hidden">
+      {/* Sezione Cerimonia e Ricevimento: stile aperto, raffinato ed essenziale senza riquadri rigidi */}
+      <div className="relative text-center py-6 sm:py-8">
         <div className="relative z-10 max-w-2xl mx-auto">
           <p className="font-sans text-xs uppercase tracking-[0.3em] text-rose-mauve font-semibold mb-2">
             Rito Civile e Ricevimento
           </p>
 
-          <h2 className="font-serif text-3xl sm:text-4xl text-[#1a1a1a] font-normal mb-2.5">
+          <h2 className="font-serif italic text-3xl sm:text-5xl text-[#1a1a1a] font-normal mb-3">
             La Nostra Giornata
           </h2>
 
-          <p className="font-serif italic text-[#333333] text-base sm:text-lg mb-6 font-light">
+          <p className="font-serif italic text-[#333333] text-base sm:text-lg mb-8 font-light">
             Saremo felici di accogliervi per celebrare insieme il momento del sì e proseguire con i festeggiamenti tra i giardini in fiore e il verde della tenuta.
           </p>
 
-          {/* Griglia Informazioni a contrasto chiaro */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-5 border-y border-champagne py-5 mb-6 text-left bg-[#faf8f5] rounded-2xl p-5">
+          {/* Griglia Informazioni fluida su fondo aperto */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 py-6 mb-8 text-left border-y border-champagne/40">
             {/* Orario */}
-            <div className="flex items-start gap-3.5">
-              <div className="w-10 h-10 rounded-full bg-white border border-champagne flex items-center justify-center shrink-0 text-burgundy shadow-sm mt-0.5">
+            <div className="flex items-start gap-4">
+              <div className="w-11 h-11 rounded-full bg-champagne/20 flex items-center justify-center shrink-0 text-burgundy mt-0.5">
                 <Clock className="w-5 h-5 text-burgundy" />
               </div>
               <div>
@@ -58,8 +58,8 @@ export const CeremonyCard: React.FC = () => {
             </div>
 
             {/* Luogo */}
-            <div className="flex items-start gap-3.5 border-t sm:border-t-0 sm:border-l border-champagne/60 pt-4 sm:pt-0 sm:pl-6">
-              <div className="w-10 h-10 rounded-full bg-white border border-champagne flex items-center justify-center shrink-0 text-sage shadow-sm mt-0.5">
+            <div className="flex items-start gap-4 sm:border-l sm:border-champagne/40 sm:pl-8">
+              <div className="w-11 h-11 rounded-full bg-champagne/20 flex items-center justify-center shrink-0 text-sage mt-0.5">
                 <MapPin className="w-5 h-5 text-sage" />
               </div>
               <div>
