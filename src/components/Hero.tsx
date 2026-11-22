@@ -2,12 +2,13 @@ import React from 'react';
 
 export const Hero: React.FC = () => {
   return (
-    <header className="relative pt-6 sm:pt-8 pb-6 sm:pb-8 px-4 text-center overflow-hidden flex flex-col items-center justify-center bg-white">
+    <header className="relative pt-24 sm:pt-28 pb-8 sm:pb-12 px-4 text-center overflow-hidden flex flex-col items-center justify-center bg-white">
       {/* 
-        Angolo Floreale Botanico (Proposta A a Destra con sfumatura organica):
-        Collocato nell'angolo superiore destro senza tagli squadrati, non copre le scritte
+        Angolo Floreale Botanico (Proposta A a Destra con foglie complete a punte naturali):
+        Collocato nell'angolo superiore destro, con foglie che terminano organicamente senza alcun taglio netto.
+        Dimensione calibrata su mobile (w-[180px] sm:w-[260px] md:w-[340px]) per non invadere lo spazio del testo.
       */}
-      <div className="absolute top-0 right-0 w-[240px] sm:w-[320px] md:w-[400px] pointer-events-none select-none z-0">
+      <div className="absolute top-0 right-0 w-[180px] sm:w-[260px] md:w-[340px] pointer-events-none select-none z-0">
         <img
           src="./images/corner_floreale_top_right.png"
           alt="Angolo floreale di dalie ad acquerello"
@@ -32,7 +33,11 @@ export const Hero: React.FC = () => {
         </picture>
       </div>
 
-      <div className="max-w-3xl mx-auto relative z-10 w-full -mt-2 sm:-mt-3">
+      {/* 
+        Contenitore Testi abbassato (pt-24 su mobile) per garantire spazio d'aria aureo
+        e zero sovrapposizioni tra il fiore nell'angolo e 'Partecipazione di Nozze' / 'Michele'
+      */}
+      <div className="max-w-3xl mx-auto relative z-10 w-full mt-4 sm:mt-6">
         {/* Sovratitolo in Verde Salvia Nobile (#626a3a) con spaziatura inferiore aurea aumentata */}
         <p className="font-sans text-xs uppercase tracking-[0.35em] text-sage font-medium mb-3 sm:mb-4">
           Partecipazione di Nozze
