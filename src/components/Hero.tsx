@@ -19,15 +19,15 @@ export const Hero: React.FC = () => {
       </div>
 
       {/* 
-        Acquerello della Tenuta come SFONDO TENUE su BIANCO PURO (#FFFFFF):
+        Acquerello autentico della Cappella storica con gli Sposi su BIANCO PURO (#FFFFFF):
         Opacità calibrata al 20%, luminoso, fresco e discreto.
       */}
       <div className="absolute inset-0 pointer-events-none -z-10 flex items-center justify-center overflow-hidden">
         <picture className="w-full max-w-5xl h-full flex items-center justify-center">
-          <source srcSet="./images/webp/casale_acquerello_hero.webp" type="image/webp" />
+          <source srcSet="./images/cappella_acquerello_sposi_v2.png" type="image/png" />
           <img
-            src="./images/casale_acquerello_hero.png"
-            alt="Tenuta Tana di Volpe Acquerello"
+            src="./images/cappella_acquerello_sposi_v2.png"
+            alt="Tenuta Tana di Volpe Acquerello con gli Sposi"
             className="w-full h-full object-contain max-h-[460px] opacity-[0.20] filter contrast-[1.05]"
             loading="eager"
           />
