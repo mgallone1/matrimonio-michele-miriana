@@ -4,24 +4,25 @@ export const Hero: React.FC = () => {
   return (
     <header className="relative pt-10 sm:pt-16 pb-6 sm:pb-8 px-4 text-center overflow-hidden flex items-center justify-center bg-white">
       {/* 
-        Dalie acquerellate in alto negli angoli (Sinistro e Destro):
-        Raffinate, sfumate, nei toni bordeaux, blush e salvia per portare calore e luce
+        Dalie acquerellate in alto negli angoli con i due colori autentici della tavola:
+        - Sinistra: Dalia CHIARA (Rosa Blush / Cipria cipria vellutato con sfumature crema e salvia)
+        - Destra: Dalia SCURA (Bordeaux profondo / Dark Wine vellutato)
       */}
-      {/* Angolo Sinistro */}
-      <div className="absolute top-0 left-0 sm:top-2 sm:left-2 w-28 sm:w-44 md:w-56 pointer-events-none select-none z-0 opacity-85 -scale-x-100 -rotate-6 transform -translate-x-4 -translate-y-4 sm:-translate-x-2 sm:translate-y-0">
+      {/* Angolo Sinistro: Dalia Chiara (Blush Pink) */}
+      <div className="absolute top-0 left-0 sm:top-2 sm:left-2 w-28 sm:w-44 md:w-56 pointer-events-none select-none z-0 opacity-85 -rotate-6 transform -translate-x-4 -translate-y-4 sm:-translate-x-2 sm:translate-y-0">
         <img
-          src="./images/dalia_angolo_acquerello.png"
-          alt="Dalia botanica acquerellata sinistra"
+          src="./images/dalia_chiara_blush.png"
+          alt="Dalia botanica acquerellata chiara rosa blush"
           className="w-full h-auto object-contain filter drop-shadow-sm"
           loading="eager"
         />
       </div>
 
-      {/* Angolo Destro */}
+      {/* Angolo Destro: Dalia Scura (Bordeaux / Dark Wine) */}
       <div className="absolute top-0 right-0 sm:top-2 sm:right-2 w-28 sm:w-44 md:w-56 pointer-events-none select-none z-0 opacity-85 rotate-6 transform translate-x-4 -translate-y-4 sm:translate-x-2 sm:translate-y-0">
         <img
-          src="./images/dalia_angolo_acquerello.png"
-          alt="Dalia botanica acquerellata destra"
+          src="./images/dalia_scura_burgundy.png"
+          alt="Dalia botanica acquerellata scura bordeaux"
           className="w-full h-auto object-contain filter drop-shadow-sm"
           loading="eager"
         />
