@@ -34,9 +34,9 @@ export default {
           dark: '#4c532c',
         },
         burgundy: {
-          DEFAULT: '#4a0d1b',
-          light: '#6b1427',
-          dark: '#300811',
+          DEFAULT: '#3c1323', // Campionato dalla dalia scura in alto a sinistra
+          light: '#561f25',
+          dark: '#290000',
         },
         paper: {
           DEFAULT: '#FFFFFF',
