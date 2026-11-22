@@ -56,13 +56,13 @@ export const InvitationCardModal: React.FC<InvitationCardModalProps> = ({ isOpen
         {/* Contenuto dell'invito con z-10 */}
         <div className="relative z-10 w-full flex flex-col items-center">
           {/* 
-            Tatuaggio acquerellato Michele & Miriana
+            Tatuaggio acquerellato Michele & Miriana con fedi nuziali
           */}
           <div className="flex justify-center mb-4 sm:mb-5 pointer-events-none select-none">
             <img
               src="./images/tatuaggio_acquerello_invito.png"
-              alt="Tatuaggio Michele e Miriana ad acquerello"
-              className="w-32 h-28 sm:w-40 sm:h-36 md:w-44 md:h-40 object-contain filter drop-shadow-sm transition-transform hover:scale-105 duration-300"
+              alt="Iniziali e fedi nuziali ad acquerello"
+              className="w-36 h-36 sm:w-44 sm:h-44 md:w-48 md:h-48 object-contain transition-transform hover:scale-105 duration-300"
               loading="eager"
             />
           </div>
