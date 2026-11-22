@@ -6,9 +6,9 @@ export interface BankSettings {
 }
 
 export const DEFAULT_BANK_SETTINGS: BankSettings = {
-  iban: 'IT60 X 05428 11101 000000123456',
+  iban: 'IT02 L 12345 67890 000000123456',
   intestatari: 'Michele & Miriana',
-  banca: 'Intesa Sanpaolo / Fineco Bank',
+  banca: 'Banca Nazionale del Lavoro (BNL)',
   causale: 'Regalo Nozze Michele e Miriana',
 };
 
