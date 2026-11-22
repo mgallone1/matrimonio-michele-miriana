@@ -6,7 +6,7 @@ export interface BankSettings {
 }
 
 export const DEFAULT_BANK_SETTINGS: BankSettings = {
-  iban: 'IT02 L 12345 67890 000000123456',
+  iban: 'IT02L1234567890000000123456',
   intestatari: 'Michele & Miriana',
   banca: 'Banca Nazionale del Lavoro (BNL)',
   causale: 'Regalo Nozze Michele e Miriana',
@@ -21,7 +21,7 @@ export function getBankSettings(): BankSettings {
     if (!raw) return DEFAULT_BANK_SETTINGS;
     const parsed = JSON.parse(raw);
     return {
-      iban: (parsed.iban && typeof parsed.iban === 'string') ? parsed.iban.trim() : DEFAULT_BANK_SETTINGS.iban,
+      iban: (parsed.iban && typeof parsed.iban === 'string') ? parsed.iban.replace(/\s+/g, '').trim() : DEFAULT_BANK_SETTINGS.iban,
       intestatari: (parsed.intestatari && typeof parsed.intestatari === 'string') ? parsed.intestatari.trim() : DEFAULT_BANK_SETTINGS.intestatari,
       banca: (parsed.banca && typeof parsed.banca === 'string') ? parsed.banca.trim() : DEFAULT_BANK_SETTINGS.banca,
       causale: (parsed.causale && typeof parsed.causale === 'string') ? parsed.causale.trim() : DEFAULT_BANK_SETTINGS.causale,
@@ -34,8 +34,12 @@ export function getBankSettings(): BankSettings {
 export function saveBankSettings(settings: BankSettings): void {
   if (typeof window === 'undefined') return;
   try {
-    localStorage.setItem(BANK_STORAGE_KEY, JSON.stringify(settings));
-    window.dispatchEvent(new CustomEvent('bank_settings_updated', { detail: settings }));
+    const sanitizedSettings = {
+      ...settings,
+      iban: settings.iban.replace(/\s+/g, '').trim(),
+    };
+    localStorage.setItem(BANK_STORAGE_KEY, JSON.stringify(sanitizedSettings));
+    window.dispatchEvent(new CustomEvent('bank_settings_updated', { detail: sanitizedSettings }));
   } catch (err) {
     console.warn('Errore nel salvataggio impostazioni bancarie:', err);
   }

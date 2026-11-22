@@ -72,8 +72,8 @@ export const GiftSection: React.FC = () => {
           </div>
 
           <div className="p-4 bg-paper-subtle/50 rounded-xl border border-champagne flex flex-col md:flex-row items-center justify-between gap-4 mb-6">
-            <span className="font-mono text-xs sm:text-sm md:text-[15px] font-semibold text-[#1a1a1a] tracking-wide whitespace-nowrap overflow-x-auto select-all max-w-full">
-              {bankData.iban}
+            <span className="font-mono text-xs sm:text-sm md:text-base font-semibold text-[#1a1a1a] tracking-wider select-all">
+              {cleanIban}
             </span>
             <Magnetic distance={0.2}>
               <button
