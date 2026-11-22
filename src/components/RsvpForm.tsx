@@ -4,6 +4,7 @@ import { CheckCircle2, AlertCircle, Loader2 } from 'lucide-react';
 import { RsvpSubmission, Companion } from '../types/wedding';
 import { saveRsvp } from '../lib/supabase';
 import { sanitizeText, isValidPhone } from '../lib/security';
+import { DahliaFlower } from './DahliaFlower';
 
 export const RsvpForm: React.FC = () => {
   const [formData, setFormData] = useState({
@@ -178,7 +179,7 @@ export const RsvpForm: React.FC = () => {
           Gradita gentile conferma entro il 30 Aprile 2027
         </p>
         <div className="floral-divider">
-          <img src="/icons/dahlia.svg" alt="" className="w-4 h-4 text-blush opacity-90" />
+          <DahliaFlower size={18} />
         </div>
       </div>
 

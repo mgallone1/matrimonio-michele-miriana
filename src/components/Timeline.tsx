@@ -1,44 +1,51 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import { DahliaFlower } from './DahliaFlower';
 
 interface TimelineStep {
   time: string;
   title: string;
+  subtitle: string;
   description: string;
-  detail: string;
 }
 
 export const Timeline: React.FC = () => {
   const steps: TimelineStep[] = [
     {
       time: '16:30',
-      title: 'Accoglienza nel Parco',
-      description: 'Benvenuto agli ospiti con rinfresco e acque aromatizzate tra gli ulivi secolari.',
-      detail: 'Parco della Tenuta',
+      title: 'Arrivo degli Ospiti & Benvenuto',
+      subtitle: 'La Corte Storica di Tenuta Tana di Volpe',
+      description: 'Accoglienza fresca tra calici di bollicine, musica soffusa e la brezza collinare.',
     },
     {
-      time: '17:15',
-      title: 'Il Rito Civile',
-      description: 'Celebrazione delle nozze all’aperto, avvolti dalla quiete e dai colori di Tana di Volpe.',
-      detail: 'Prato all’Inglese',
+      time: '17:00',
+      title: 'Rito Civile di Nozze',
+      subtitle: 'Il Prato all’Inglese tra gli Ulivi',
+      description: 'Lo scambio delle nostre promesse e delle fedi, circondati dal vostro affetto e dai giardini.',
     },
     {
-      time: '18:30',
-      title: 'Aperitivo al Tramonto',
-      description: 'Isole gastronomiche cilentane, calici di benvenuto e musica dal vivo nella luce dorata.',
-      detail: 'Giardino delle Bouganville',
+      time: '18:15',
+      title: 'Aperitivo & Isole Gastronomiche',
+      subtitle: 'Il Giardino delle Bouganville',
+      description: 'Specialità cilentane, show cooking a vista e brindisi al tramonto sulle colline.',
     },
     {
-      time: '20:30',
-      title: 'Cena Nuziale Sotto le Stelle',
-      description: 'Banchetto conviviale nella corte del casale tra profumi mediterranei e filari di luce.',
-      detail: 'La Corte del Casale',
+      time: '20:00',
+      title: 'Cena Nuziale Placée',
+      subtitle: 'La Terrazza degli Ulivi',
+      description: 'Un percorso di sapori tipici campani, abbinamenti di vini e atmosfera romantica.',
+    },
+    {
+      time: '22:30',
+      title: 'Taglio della Torta & Sweet Table',
+      subtitle: 'La Corte Illuminata dai Filari di Luci',
+      description: 'La torta nuziale, il buffet dei dolci, la fontana di cioccolato e il brindisi d’augurio.',
     },
     {
       time: '23:30',
-      title: 'Taglio Torta & Party',
-      description: 'Momento dolce, brindisi augurale, open bar e danze fino a notte inoltrata.',
-      detail: 'Bordo Piscina & Parco',
+      title: 'Open Bar & DJ Set',
+      subtitle: 'Fino a Notte Fonda',
+      description: 'Cocktail d’autore, musica, balli scatenati e festeggiamenti sotto le stelle.',
     },
   ];
 
@@ -48,11 +55,11 @@ export const Timeline: React.FC = () => {
         <p className="font-sans text-xs uppercase tracking-[0.35em] text-sage font-medium mb-3">
           I Momenti della Giornata
         </p>
-        <h2 className="font-serif text-3xl sm:text-5xl text-espresso font-normal">
+        <h2 className="font-serif text-3xl sm:text-5xl text-[#1a1a1a] font-normal">
           Il Programma delle Nozze
         </h2>
         <div className="floral-divider">
-          <img src="/icons/dahlia.svg" alt="" className="w-4 h-4 text-blush opacity-90" />
+          <DahliaFlower size={18} />
         </div>
       </div>
 
@@ -85,21 +92,22 @@ export const Timeline: React.FC = () => {
                   <span className="w-2.5 h-2.5 rounded-full bg-burgundy" />
                 </div>
 
-                <div className="w-full sm:w-1/2 pl-16 sm:pl-8 sm:pr-8">
-                  <div className="p-6 sm:p-7 rounded-2xl white-card white-card-hover">
-                    <div className="flex items-baseline justify-between gap-3 mb-2">
-                      <span className="font-serif text-2xl sm:text-3xl font-normal text-burgundy">
-                        {step.time}
-                      </span>
-                      <span className="font-sans text-[11px] uppercase tracking-widest text-sage font-medium">
-                        {step.detail}
-                      </span>
-                    </div>
-
-                    <h3 className="font-serif text-xl font-medium text-espresso mb-1">
+                <div
+                  className={`w-full sm:w-1/2 pl-14 sm:pl-0 ${
+                    isEven ? 'sm:pl-8 sm:text-left' : 'sm:pr-8 sm:text-right'
+                  }`}
+                >
+                  <div className="p-6 rounded-2xl white-card white-card-hover inline-block w-full">
+                    <span className="font-serif text-2xl font-normal text-burgundy tracking-wide block mb-1">
+                      {step.time}
+                    </span>
+                    <h3 className="font-serif text-xl font-normal text-[#1a1a1a] mb-1">
                       {step.title}
                     </h3>
-                    <p className="text-xs sm:text-sm text-espresso/75 font-sans leading-relaxed">
+                    <p className="text-xs uppercase tracking-wider text-sage font-sans font-medium mb-2">
+                      {step.subtitle}
+                    </p>
+                    <p className="text-xs text-[#444444] font-sans leading-relaxed">
                       {step.description}
                     </p>
                   </div>

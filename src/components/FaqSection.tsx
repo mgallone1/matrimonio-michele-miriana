@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { ChevronDown, Hotel } from 'lucide-react';
+import { DahliaFlower } from './DahliaFlower';
 
 interface FaqItem {
   id: string;
@@ -49,33 +50,22 @@ export const FaqSection: React.FC = () => {
     },
     {
       id: 'faq-7',
-      question: 'Possiamo scattare fotografie e condividerle?',
+      question: 'Avete previsto una navetta o transfer?',
       answer:
-        'Durante il rito civile vi invitiamo a vivere il momento con il cuore e a lasciare spazio ai fotografi ufficiali. Per tutto il resto della festa siete caldamente invitati a scattare! Troverete dei QR code sui tavoli per caricare i vostri scatti migliori.',
-    },
-    {
-      id: 'faq-8',
-      question: 'A chi possiamo rivolgerci il giorno delle nozze per dubbi urgenti?',
-      answer:
-        'Per permetterci di goderci appieno la giornata, per qualsiasi necessità logistica o domanda dell’ultimo minuto troverete a disposizione i nostri testimoni e il wedding coordinator della Tenuta.',
+        'Sì! Per chi arriva in treno alla stazione di Paestum/Capaccio o per gli ospiti che alloggiano nelle vicinanze senza automobile, è possibile richiedere il servizio navetta selezionando l’opzione direttamente nel modulo RSVP.',
     },
   ];
 
   const accommodations = [
     {
-      name: 'Camere Tenuta Tana di Volpe',
-      type: 'All’interno della Tenuta',
-      note: 'Disponibilità limitata per parenti stretti, contattare gli sposi',
+      name: 'B&B & Agriturismi Tenuta Tana di Volpe',
+      zone: 'Albanella (a 2-5 min dalla Tenuta)',
+      note: 'Strutture immerse negli uliveti convenzionate per le nozze',
     },
     {
-      name: 'Relais & Hotel a Paestum',
-      type: 'A circa 15 min dalla Tenuta',
-      note: 'Strutture vicine al Parco Archeologico dei Templi o al mare',
-    },
-    {
-      name: 'B&B & Agriturismi ad Albanella',
-      type: 'A 5-10 min dalla Tenuta',
-      note: 'Accoglienti strutture immerse nel verde delle colline salernitane',
+      name: 'Hotel & Resort Zona Paestum Templi',
+      zone: 'Capaccio Paestum (12-15 min)',
+      note: 'Strutture 4 stelle vicine al Parco Archeologico e al mare',
     },
   ];
 
@@ -84,16 +74,16 @@ export const FaqSection: React.FC = () => {
   };
 
   return (
-    <section id="faq" className="py-20 px-4 max-w-4xl mx-auto scroll-mt-10 bg-white">
+    <section id="faq" className="py-20 px-4 max-w-5xl mx-auto scroll-mt-10 bg-white">
       <div className="text-center mb-16">
         <p className="font-sans text-xs uppercase tracking-[0.35em] text-sage font-medium mb-3">
           Domande Frequenti &amp; Info
         </p>
-        <h2 className="font-serif text-3xl sm:text-5xl text-espresso font-normal">
+        <h2 className="font-serif text-3xl sm:text-5xl text-[#1a1a1a] font-normal">
           Dettagli &amp; Consigli Utili
         </h2>
         <div className="floral-divider">
-          <img src="/icons/dahlia.svg" alt="" className="w-4 h-4 text-blush opacity-90" />
+          <DahliaFlower size={18} />
         </div>
       </div>
 
@@ -109,7 +99,7 @@ export const FaqSection: React.FC = () => {
                 <button
                   type="button"
                   onClick={() => toggleFaq(faq.id)}
-                  className="w-full p-5 sm:p-6 text-left flex items-center justify-between gap-3 text-espresso hover:text-burgundy transition-colors"
+                  className="w-full p-5 sm:p-6 text-left flex items-center justify-between gap-3 text-[#1a1a1a] hover:text-burgundy transition-colors"
                 >
                   <span className="font-serif text-lg sm:text-xl font-normal">
                     {faq.question}
@@ -122,7 +112,7 @@ export const FaqSection: React.FC = () => {
                 </button>
 
                 {isOpen && (
-                  <div className="px-5 pb-6 sm:px-6 text-xs sm:text-sm text-espresso/75 font-sans leading-relaxed border-t border-champagne/40 pt-4">
+                  <div className="px-5 pb-6 sm:px-6 text-xs sm:text-sm text-[#333333] font-sans leading-relaxed border-t border-champagne/40 pt-4">
                     {faq.answer}
                   </div>
                 )}
@@ -132,26 +122,30 @@ export const FaqSection: React.FC = () => {
         </div>
 
         <div className="p-7 rounded-3xl white-card space-y-4">
-          <div className="flex items-center gap-2.5 text-espresso font-serif text-xl font-normal pb-3 border-b border-champagne">
+          <div className="flex items-center gap-2.5 text-[#1a1a1a] font-serif text-xl font-normal pb-3 border-b border-champagne">
             <Hotel className="w-5 h-5 text-sage" />
             <span>Dove Soggiornare</span>
           </div>
 
-          <p className="text-xs text-espresso/70 font-sans leading-relaxed">
-            Per chi desidera fermarsi per il weekend e visitare Paestum o la costa cilentana:
+          <p className="text-xs text-[#444444] font-sans leading-relaxed">
+            Per chi desidera pernottare nei dintorni della tenuta, ecco alcune zone consigliate nelle immediate vicinanze:
           </p>
 
-          <div className="space-y-3">
+          <div className="space-y-3 pt-2">
             {accommodations.map((acc, idx) => (
-              <div key={idx} className="p-3.5 rounded-xl bg-white border border-champagne text-xs">
-                <span className="font-semibold text-espresso block text-sm">{acc.name}</span>
-                <span className="text-[10px] uppercase tracking-wider text-sage font-medium block my-0.5">
-                  {acc.type}
-                </span>
-                <span className="text-espresso/60 block">{acc.note}</span>
+              <div key={idx} className="p-3.5 rounded-xl bg-paper-subtle/50 border border-champagne/70 text-xs">
+                <strong className="block font-medium text-[#1a1a1a] font-serif text-sm">
+                  {acc.name}
+                </strong>
+                <span className="text-sage block mt-0.5 font-sans">{acc.zone}</span>
+                <span className="text-[#666666] block mt-1 font-sans text-[11px]">{acc.note}</span>
               </div>
             ))}
           </div>
+
+          <p className="text-[11px] text-[#666666] font-sans pt-2 border-t border-champagne/40">
+            Per suggerimenti personalizzati o supporto con le prenotazioni, scriveteci nel modulo RSVP.
+          </p>
         </div>
       </div>
     </section>

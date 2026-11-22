@@ -1,6 +1,7 @@
 import React, { useRef } from 'react';
 import gsap from 'gsap';
 import { TattooHeart } from './TattooHeart';
+import { DahliaFlower } from './DahliaFlower';
 
 interface InvitationCardModalProps {
   isOpen: boolean;
@@ -45,14 +46,22 @@ export const InvitationCardModal: React.FC<InvitationCardModalProps> = ({ isOpen
   return (
     <div
       ref={overlayRef}
-      className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-[#281D17]/55 backdrop-blur-md"
+      className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-[#1a120e]/65 backdrop-blur-md"
       aria-modal="true"
       role="dialog"
     >
       <div
         ref={cardRef}
-        className="relative w-full max-w-lg bg-white rounded-3xl p-8 sm:p-12 border border-champagne shadow-2xl text-center"
+        className="relative w-full max-w-lg bg-white rounded-3xl p-8 sm:p-12 border border-champagne shadow-2xl text-center overflow-hidden"
       >
+        {/* Dalie ad acquerello discrete agli angoli per portare luce e colore */}
+        <div className="absolute -top-3 -right-3 pointer-events-none opacity-45">
+          <DahliaFlower size={70} />
+        </div>
+        <div className="absolute -bottom-3 -left-3 pointer-events-none opacity-45">
+          <DahliaFlower size={70} />
+        </div>
+
         {/* Il Simbolo Ufficiale: Il Tatuaggio Cuore M & M */}
         <div className="flex justify-center mb-5">
           <TattooHeart className="w-16 h-16 text-burgundy transition-transform hover:scale-105 duration-300" />
@@ -67,18 +76,22 @@ export const InvitationCardModal: React.FC<InvitationCardModalProps> = ({ isOpen
           Michele &amp; Miriana
         </h1>
 
-        <div className="floral-divider">
-          <TattooHeart className="w-5 h-5 text-burgundy/80" />
+        <div className="flex items-center justify-center gap-3 my-4">
+          <div className="w-10 h-px bg-champagne" />
+          <DahliaFlower size={16} />
+          <TattooHeart className="w-4 h-4 text-burgundy/80 mx-0.5" />
+          <DahliaFlower size={16} />
+          <div className="w-10 h-px bg-champagne" />
         </div>
 
-        <p className="font-serif italic text-espresso/75 text-base sm:text-lg max-w-sm mx-auto mb-8 font-light">
+        <p className="font-serif italic text-[#2c2c2c] text-base sm:text-lg max-w-sm mx-auto mb-8 font-light">
           Hanno il piacere di invitarvi a celebrare il loro matrimonio
         </p>
 
         {/* Data e Luogo */}
-        <div className="py-4 border-y border-champagne mb-8 space-y-2 bg-[#FAF6F0]/40 rounded-xl">
-          <p className="font-serif text-xl sm:text-2xl text-burgundy font-medium">
-            Venerdì, 2 Luglio 2027 • Ore 16:30
+        <div className="py-4 border-y border-champagne mb-8 space-y-1.5 bg-paper-subtle/50 rounded-xl">
+          <p className="font-serif text-xl sm:text-2xl text-[#1a1a1a] font-medium">
+            2 Luglio 2027
           </p>
           <p className="font-sans text-xs tracking-widest text-sage uppercase font-medium">
             Tenuta Tana di Volpe • Albanella (Salerno)

@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { Magnetic } from './reactbits/Magnetic';
 import { getBankSettings, BankSettings } from '../lib/bankSettings';
+import { DahliaFlower } from './DahliaFlower';
+import { Check, Copy } from 'lucide-react';
 
 export const GiftSection: React.FC = () => {
   const [copied, setCopied] = useState(false);
@@ -18,7 +20,8 @@ export const GiftSection: React.FC = () => {
     };
   }, []);
 
-  const cleanIban = bankData.iban.replace(/\s+/g, '');
+  // Rimozione totale di qualsiasi spazio quando l'ospite copia l'IBAN
+  const cleanIban = bankData.iban.replace(/\s+/g, '').trim();
 
   const handleCopy = async () => {
     try {
@@ -37,16 +40,16 @@ export const GiftSection: React.FC = () => {
         <p className="font-sans text-xs uppercase tracking-[0.35em] text-sage font-medium mb-3">
           Un Pensiero per il Nostro Futuro
         </p>
-        <h2 className="font-serif text-3xl sm:text-5xl text-espresso font-normal">
+        <h2 className="font-serif text-3xl sm:text-5xl text-[#1a1a1a] font-normal">
           Lista Nozze &amp; Luna di Miele
         </h2>
         <div className="floral-divider">
-          <img src="/icons/dahlia.svg" alt="" className="w-4 h-4 text-blush opacity-90" />
+          <DahliaFlower size={18} />
         </div>
       </div>
 
       <div className="p-8 sm:p-12 rounded-3xl white-card text-center relative overflow-hidden">
-        <p className="text-espresso/80 text-base sm:text-lg max-w-xl mx-auto leading-relaxed mb-8 font-serif font-light">
+        <p className="text-[#2c2c2c] text-base sm:text-lg max-w-xl mx-auto leading-relaxed mb-8 font-serif font-light">
           «Il regalo più bello sarà averti con noi per festeggiare, ridere e ballare. 
           Se desideri accompagnare i nostri primi passi e contribuire al nostro viaggio di nozze, puoi farlo qui:»
         </p>
@@ -54,7 +57,7 @@ export const GiftSection: React.FC = () => {
         {/* Box IBAN su fondo bianco pulito con bordo dorato Champagne */}
         <div className="p-6 sm:p-8 rounded-2xl border border-champagne max-w-xl mx-auto text-left bg-white shadow-sm">
           <div className="flex items-center justify-between gap-2 mb-4">
-            <span className="text-[11px] uppercase tracking-[0.2em] font-medium text-espresso/60 font-sans">
+            <span className="text-[11px] uppercase tracking-[0.2em] font-semibold text-[#1a1a1a]/70 font-sans">
               Coordinate Bancarie (IBAN)
             </span>
             <span className="text-[11px] text-sage font-medium font-sans uppercase tracking-wider">
@@ -62,35 +65,45 @@ export const GiftSection: React.FC = () => {
             </span>
           </div>
 
-          <div className="p-4 bg-white rounded-xl border border-champagne flex flex-col md:flex-row items-center justify-between gap-4 mb-6">
-            <span className="font-mono text-xs sm:text-sm md:text-[15px] font-semibold text-burgundy tracking-wide whitespace-nowrap overflow-x-auto select-all max-w-full">
+          <div className="p-4 bg-paper-subtle/50 rounded-xl border border-champagne flex flex-col md:flex-row items-center justify-between gap-4 mb-6">
+            <span className="font-mono text-xs sm:text-sm md:text-[15px] font-semibold text-[#1a1a1a] tracking-wide whitespace-nowrap overflow-x-auto select-all max-w-full">
               {bankData.iban}
             </span>
             <Magnetic distance={0.2}>
               <button
                 type="button"
                 onClick={handleCopy}
-                className="btn-secondary text-[11px] py-2 px-4 uppercase tracking-wider shrink-0 min-w-[110px]"
-                title="Copia IBAN negli appunti"
+                className="btn-secondary text-[11px] py-2 px-4 uppercase tracking-wider shrink-0 min-w-[125px] flex items-center justify-center gap-1.5"
+                title="Copia IBAN senza spazi negli appunti"
               >
-                {copied ? 'Copiato!' : 'Copia IBAN'}
+                {copied ? (
+                  <>
+                    <Check className="w-3.5 h-3.5 text-sage" />
+                    <span>Copiato!</span>
+                  </>
+                ) : (
+                  <>
+                    <Copy className="w-3.5 h-3.5 text-burgundy" />
+                    <span>Copia IBAN</span>
+                  </>
+                )}
               </button>
             </Magnetic>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 text-xs text-espresso/70 font-sans border-t border-champagne/60 pt-4">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 text-xs font-sans border-t border-champagne/60 pt-4">
             <div>
-              <span className="block text-espresso/50 mb-0.5">Intestatari del conto:</span>
-              <strong className="text-espresso font-medium text-sm">{bankData.intestatari}</strong>
+              <span className="block text-[#555555] mb-0.5">Intestatari del conto:</span>
+              <strong className="text-[#1a1a1a] font-medium text-sm">{bankData.intestatari}</strong>
             </div>
             <div>
-              <span className="block text-espresso/50 mb-0.5">Causale suggerita:</span>
-              <strong className="text-espresso font-medium text-sm">{bankData.causale}</strong>
+              <span className="block text-[#555555] mb-0.5">Causale suggerita:</span>
+              <strong className="text-[#1a1a1a] font-medium text-sm">{bankData.causale}</strong>
             </div>
           </div>
         </div>
 
-        <p className="text-xs text-espresso/50 font-sans mt-6">
+        <p className="text-xs text-[#666666] font-sans mt-6">
           Grazie di vero cuore per essere parte del nostro cammino.
         </p>
       </div>
