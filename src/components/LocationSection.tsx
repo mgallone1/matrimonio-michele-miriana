@@ -118,7 +118,7 @@ export const LocationSection: React.FC = () => {
               La tenuta è situata nella frazione Matinella di Albanella, facilmente raggiungibile a 15 minuti dagli scavi di Paestum e dalla costa.
             </p>
 
-            <div className="space-y-3 text-xs text-[#555555] font-sans border-t border-champagne/40 pt-5 mb-8">
+            <div className="space-y-3 text-xs text-[#555555] font-sans border-t border-champagne/40 pt-5 mb-6">
               <p>
                 <strong className="text-[#1a1a1a]">Come arrivare:</strong> Dalla SS18 Tirrena Inferiore prendere l'uscita per Matinella / Albanella e proseguire lungo la Via Provinciale fino al numero 19.
               </p>
@@ -128,16 +128,16 @@ export const LocationSection: React.FC = () => {
             </div>
           </div>
 
-          {/* Pulsanti con icone Maps chiare */}
-          <div className="grid grid-cols-2 gap-3">
+          {/* Pulsanti compatti su una riga con icone Maps chiare */}
+          <div className="flex flex-wrap items-center gap-3">
             <a
               href={googleMapsUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="btn-primary text-[11px] py-2.5 px-3 text-center flex items-center justify-center gap-2 shadow-sm"
+              className="btn-primary text-xs py-2 px-4 inline-flex items-center justify-center gap-1.5 whitespace-nowrap shadow-sm"
             >
               <Navigation className="w-3.5 h-3.5 text-white shrink-0" />
-              <span>Apri Google Maps</span>
+              <span>Google Maps</span>
               <ExternalLink className="w-3 h-3 shrink-0 opacity-80" />
             </a>
 
@@ -145,7 +145,7 @@ export const LocationSection: React.FC = () => {
               href={appleMapsUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="btn-secondary text-[11px] py-2.5 px-3 text-center flex items-center justify-center gap-2"
+              className="btn-secondary text-xs py-2 px-4 inline-flex items-center justify-center gap-1.5 whitespace-nowrap"
             >
               <MapPin className="w-3.5 h-3.5 text-sage shrink-0" />
               <span>Apple Maps</span>
