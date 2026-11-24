@@ -11,7 +11,7 @@ export const Hero: React.FC = () => {
       */}
       <div className="absolute top-0 right-0 w-[355px] sm:w-[480px] md:w-[600px] lg:w-[700px] pointer-events-none select-none z-0">
         <img
-          src="./images/corner_floreale_top_right.png"
+          src="./images/corner_floreale_top_right.png?v=2"
           alt="Angolo floreale di dalie ad acquerello esteso dall'angolo"
           className="w-full h-auto object-contain filter contrast-[1.02] opacity-95"
           loading="eager"
