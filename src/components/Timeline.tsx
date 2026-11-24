@@ -50,6 +50,21 @@ export const Timeline: React.FC = () => {
 
   return (
     <section id="timeline" className="py-20 px-4 max-w-4xl mx-auto scroll-mt-10 bg-white">
+      {/* 
+        Acquerello autentico della Cerimonia nel Giardino
+        Con le stesse dimensioni, proporzioni e sfocato morbido ai bordi della cappella e della facciata
+      */}
+      <div className="mb-10 max-w-2xl mx-auto text-center px-2">
+        <div className="relative inline-block w-full">
+          <img
+            src="./images/cerimonia_giardino_sfumato.png"
+            alt="Rito civile ad acquerello tra gli alberi di Tenuta Tana di Volpe"
+            className="w-full h-auto max-h-[380px] object-contain mx-auto filter contrast-[1.03]"
+            loading="lazy"
+          />
+        </div>
+      </div>
+
       <div className="text-center mb-16">
         <p className="font-sans text-xs uppercase tracking-[0.35em] text-sage font-medium mb-3">
           I Momenti della Giornata
