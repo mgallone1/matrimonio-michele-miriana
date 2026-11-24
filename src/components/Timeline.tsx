@@ -49,7 +49,7 @@ export const Timeline: React.FC = () => {
   ];
 
   return (
-    <section id="timeline" className="pt-4 sm:pt-6 pb-20 px-4 max-w-4xl mx-auto scroll-mt-10 bg-white">
+    <section id="timeline" className="pt-4 sm:pt-6 pb-10 sm:pb-12 px-4 max-w-4xl mx-auto scroll-mt-10 bg-white">
       {/* 
         Acquerello autentico della Cerimonia nel Giardino
         Con le stesse dimensioni, proporzioni e sfocato rettangolare morbido ai bordi della facciata
@@ -136,6 +136,21 @@ export const Timeline: React.FC = () => {
               </motion.div>
             );
           })}
+        </div>
+      </div>
+
+      {/* 
+        Acquerello della Cena Sotto le Stelle e Filari di Luci dopo l'Open Bar
+        Stesse dimensioni e proporzioni delle altre illustrazioni della tenuta, senza spazi superflui
+      */}
+      <div className="mt-8 sm:mt-10 max-w-2xl mx-auto text-center px-2">
+        <div className="relative inline-block w-full">
+          <img
+            src="./images/cena_luci_sfumato.png"
+            alt="Cena nuziale e festeggiamenti sotto i filari di luci a Tenuta Tana di Volpe"
+            className="w-full h-auto max-h-[380px] object-contain mx-auto filter contrast-[1.03]"
+            loading="lazy"
+          />
         </div>
       </div>
     </section>
