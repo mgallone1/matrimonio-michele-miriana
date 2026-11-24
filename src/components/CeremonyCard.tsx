@@ -90,8 +90,8 @@ export const CeremonyCard: React.FC = () => {
               {/* Parte Destra (35%): Composizione floreale verticale a trasparenza pura 100% */}
               <div className="w-[100px] sm:w-36 md:w-44 shrink-0 flex justify-end items-center pointer-events-none select-none z-10 pl-1">
                 <img
-                  src="./images/composizione_floreale_verticale.png"
-                  alt="Composizione botanica ad acquerello con dalie e boccioli"
+                  src="./images/composizione_floreale_verticale.png?v=2"
+                  alt="Composizione botanica ad acquerello con peonie e boccioli"
                   className="w-full h-auto max-h-[220px] sm:max-h-[290px] object-contain"
                   loading="lazy"
                 />
