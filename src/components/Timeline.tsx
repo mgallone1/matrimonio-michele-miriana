@@ -146,7 +146,7 @@ export const Timeline: React.FC = () => {
       <div className="mt-8 sm:mt-10 max-w-2xl mx-auto text-center px-2">
         <div className="relative inline-block w-full">
           <img
-            src="./images/cena_luci_sfumato.png"
+            src="./images/cena_luci_sfumato.png?v=2"
             alt="Cena nuziale e festeggiamenti sotto i filari di luci a Tenuta Tana di Volpe"
             className="w-full h-auto max-h-[380px] object-contain mx-auto filter contrast-[1.03]"
             loading="lazy"
